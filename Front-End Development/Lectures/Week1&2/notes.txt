@@ -1,1 +1,29 @@
 Welcome to Front-end!
+
+URL: Uniform Resource Locator!
+
+https://www.keyin.com:443?name=Alan
+
+https -> hypertext transfer protcol secure
+    protocal is a way of communication on web (www)
+    the internet & world wide web ??? Are they same OR different???
+    Network of networs internet
+    www is a way to accesss resources by using internet!
+
+    www uses different protocols for this communication! TCP/IP, HTTP, HTTPS, FTP
+
+    To secure our end-to-end communication www uses https.
+
+    Domain Name: which maps human undeerstandable names with IP address(x.x.x.x)
+
+    Port no: ~65532
+    http://  80
+    https:// 443
+
+    http://127.0.0.1/index.html:3000
+
+    Protocol+domain+port = Origin! (Secure communication)
+
+    Query String: Extra information sent with url...
+
+    https://en.wikipedia.org/wiki/HTML?useskin=modern
