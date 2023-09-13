@@ -25,6 +25,6 @@ var fname;
 fname = "Keyin";
 
 console.log(typeof fname);
-
+alert("hello");
 fname = 100;
 console.log(typeof fname);
