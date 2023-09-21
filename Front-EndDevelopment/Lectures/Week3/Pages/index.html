@@ -8,11 +8,23 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
     />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <p align="center">Hello hello</p>
+    <div>
+      <h1>This is a test div</h1>
+      <p>I am a pargraph inside div</p>
+    </div>
+
     <h1 id="top">Some more HTML!</h1>
-    <h2>Linking in HTML - Anchor</h2>
+    <h2 class="top">Linking in HTML - Anchor</h2>
     <h3>External Linking</h3>
     <a href="https://www.google.com">Google</a> <br />
     <a href="https://www.twitter.com">Twitter</a> <br />
@@ -20,7 +32,7 @@
 
     <h3>Internal Linking</h3>
     <a href="#img1">Check my images</a>
-    <p>
+    <p style="background-color: blue; color: white">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, illum
       atque quidem perspiciatis officia cum? Eos exercitationem minima labore
       maxime atque quod mollitia aperiam, veniam quaerat beatae asperiores
@@ -238,7 +250,7 @@
       exercitationem doloremque magnam, error architecto odio mollitia sequi
       sed!
     </p>
-    <h2>Forms in HTML</h2>
+    <h2 class="top">Forms in HTML</h2>
     Forms are used to take input from user! <br />-Action attribute refers to
     what you want to do with the data when form is submitted <br />
     -Method: get and post: get means send data as part of url & post means send
@@ -337,11 +349,28 @@
 
     <h2>Tables in HTML</h2>
     YOU MUST NOT HAVE ANY RED COLORED SOMETHING
-    <table border="1">
-      <tr>
-        <td>Name</td>
-        <td>Email</td>
-      </tr>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Alan</td>
+          <td>alan@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Alan</td>
+          <td>alan@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Alan</td>
+          <td>alan@gmail.com</td>
+        </tr>
+      </tbody>
     </table>
     <a href=""></a>
 
