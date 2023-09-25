@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* h1 {
+  border: 1px solid red;
+
+  width: 250px;
+} */
+/* 
+#s1 {
+  border-left: 5px solid green;
+  width: 250px;
+  padding: 20px;
+} */
+
+#links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+section {
+  border: 1px solid green;
+  padding: 5px;
+  width: 150px;
+}
+
+#s1 {
+  flex: 1;
+  margin-left: 10px;
+}
+
+#s2 {
+  flex: 1;
+}
+
+#s3 {
+  flex: 1;
+}
+
+#art1 {
+  display: flex;
+  justify-content: space-between;
+}
