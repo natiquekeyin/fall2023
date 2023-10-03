@@ -37,7 +37,13 @@ function extractAreaCode(phoneNumber) {
 }
 
 function normalizeHeight(height) {
-  return height;
+  if (height.endsWith("inches")) {
+    return height;
+  }
+  let cm = parseFloat(height);
+  let inches = cm * 0.39;
+
+  return `${inches} inches `;
 }
 
 function rowToFields(row) {
@@ -67,7 +73,7 @@ function rowToFields(row) {
 
   fields[3] = normalizeHeight(fields[3]);
 
-  return fields;
+  return fields.join(","); //join converts an array to a string with separated byt the given character...
 }
 
 function processCSV(csv) {
@@ -95,10 +101,16 @@ function processCSV(csv) {
   //   });
 
   let data = rows.map((row) => rowToFields(row));
+  // data.join("\n");
 
-  console.log(data);
+  // console.log(data);
   //   return rows;
+
+  return data.join("\n");
 }
 
 var processed = processCSV(csvData);
+console.log(csvData);
+console.log("------");
+console.log(processed);
 // console.log(processed);
