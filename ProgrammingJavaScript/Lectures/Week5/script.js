@@ -75,6 +75,7 @@
 // console.log(user.email);
 
 // Constructor function to create objects...
+// A constructor funtion ALWAYS Starts with a capital letter...
 
 // function User(f, l, e, v) {
 //   this.firstName = f;
@@ -107,20 +108,173 @@
 
 // const is a constant value that once defined cannot be changed...
 
-function A() {
-  var x = 10;
-  let y = 20;
-  const z = 30;
+// function A() {
+//   var x = 10;
+//   let y = 20;
+//   const z = 30;
 
-  //   for (let i = 0; i < 5; i++) {
-  //     console.log(i);
-  //     // console.log("The value of x is", x);
-  //     // console.log("The value of y is", y);
-  //   }
+//   //   for (let i = 0; i < 5; i++) {
+//   //     console.log(i);
+//   //     // console.log("The value of x is", x);
+//   //     // console.log("The value of y is", y);
+//   //   }
 
-  //   console.log(z); //
-  //   z = z + 10;
-  //   console.log(z);
-}
+//   //   console.log(z); //
+//   //   z = z + 10;
+//   //   console.log(z);
+// }
 
-A();
+// A();
+
+// function User(f, l, e, v) {
+//   this.firstName = f;
+//   this.lastName = l;
+//   this.email = e;
+//   this.level = v;
+//   this.department = "HR";
+//   this.loggedIn = false;
+
+//   this.login = function () {
+//     this.loggedIn = true;
+//   };
+//   this.logout = function () {
+//     this.loggedIn = false;
+//   };
+// }
+
+// let alan = new User("Alan", "Smith", "alan@gmail.com", 3);
+// let bob = new User("Bob", "Woolmer", "bob@gmail.com", 2);
+// let chris = new User("Christina", "Lee", "chris@gmail.com", 2);
+
+// Prototypal inheritance ...
+// All those methods or properties that we don't want EVERY OBJECT to carry, we put them in the prototype of the constructor method...we can call them when needed, but THEY WOULD NOT BECOME the part of the code when we create the objects...
+
+// function User(f, l, e, v) {
+//   this.firstName = f;
+//   this.lastName = l;
+//   this.email = e;
+//   this.level = v;
+// }
+
+// User.prototype.department = "HR";
+// User.prototype.loggedIn = false;
+// User.prototype.login = function () {
+//   this.loggedIn = true;
+// };
+
+// User.prototype.logout = function () {
+//   this.loggedIn = false;
+// };
+
+// let alan = new User("Alan", "Smith", "alan@gmail.com", 2);
+// console.log(alan);
+// alan.login();
+// console.log(alan);
+
+let users = [
+  {
+    firstName: "Ala",
+    lastName: "Smith",
+    email: "alan@gmail.com",
+    loggedIn: false,
+    level: 3,
+    login: function () {
+      this.loggedIn = true;
+    },
+    logout: function () {
+      this.loggedIn = false;
+    },
+  },
+  {
+    firstName: "Bob",
+    lastName: "Smith",
+    email: "bob@gmail.com",
+    loggedIn: true,
+    level: 1,
+    login: function () {
+      this.loggedIn = true;
+    },
+    logout: function () {
+      this.loggedIn = false;
+    },
+  },
+  {
+    firstName: "tina                                           ",
+    lastName: "Smith",
+    email: "christina@gmail.com",
+    loggedIn: false,
+    level: 4,
+    login: function () {
+      this.loggedIn = true;
+    },
+    logout: function () {
+      this.loggedIn = false;
+    },
+  },
+  {
+    firstName: "Christina",
+    lastName: "Smith",
+    email: "christina@gmail.com",
+    loggedIn: true,
+    level: 4,
+    login: function () {
+      this.loggedIn = true;
+    },
+    logout: function () {
+      this.loggedIn = false;
+    },
+  },
+  {
+    firstName: "Chr",
+    lastName: "Smith",
+    email: "christina@gmail.com",
+    loggedIn: false,
+    level: 4,
+    login: function () {
+      this.loggedIn = true;
+    },
+    logout: function () {
+      this.loggedIn = false;
+    },
+  },
+  {
+    firstName: "Christina",
+    lastName: "Smith",
+    email: "christina@gmail.com",
+    loggedIn: false,
+    level: 4,
+    login: function () {
+      this.loggedIn = true;
+    },
+    logout: function () {
+      this.loggedIn = false;
+    },
+  },
+];
+
+// console.log(users[0].firstName);
+// console.log(users[1].firstName);
+// console.log(users[2].firstName);
+
+// for (let i = 0; i < users.length; i++) {
+//   console.log(users[i].firstName);
+// }
+
+// users.forEach(function (user) {
+//   console.log(user.firstName);
+// });
+
+// users.forEach((user) => {
+//   console.log(user.email);
+// });
+
+// let newUsers = users.map((user) => user.email.trim().toUpperCase());
+
+// let newUsers = users.map((user) => user.email.startsWith("c"));
+// console.log(newUsers);
+
+users.forEach((user) => {
+  if (user.firstName.length > 5) {
+    console.log(user);
+  }
+});
