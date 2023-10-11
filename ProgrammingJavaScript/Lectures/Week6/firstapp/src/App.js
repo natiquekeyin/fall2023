@@ -1,25 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+// App is the main compnent tha always run when we run our react applicaiton. rest all componentrs will be embedded here...
 function App() {
+  var name = "Alan Smith";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Noman Atique - Copyright 2023
-        </a>
-      </header>
+      <h1>First React Application</h1>
+      <p>This is the start of our interesting journey of React!!!</p>
+      <p>This application is created by {name}! </p>
     </div>
   );
 }
+
+// return JSX..is the combination of html,css and javascript
 
 export default App;
