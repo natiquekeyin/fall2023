@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function () {
     var author = document.querySelector("#author").value;
     var isbn = document.querySelector("#isbn").value;
     // now pass these three values to the function addBookToList() that will add the above book to the list on the bottom of the page....
-    addBookToList(title, author, isbn);
+    addBookToList(title, author, isbn); //end of October 12 lecture
 
     e.preventDefault();
   });
