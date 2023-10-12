@@ -4,6 +4,16 @@
 // get reference of the dog picture in js
 
 // var dog = document.getElementById("dog");
+// associate an event with dog element...
+
+//   dog.addEventListener("click", handleClick);
+
+//   function handleClick(e) {
+//     dog.src =
+//       "https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60";
+
+//     e.stopPropagation();
+//   }
 
 window.addEventListener("DOMContentLoaded", function () {
   var dog = document.querySelector("#dog");
@@ -42,14 +52,15 @@ window.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#url-list").appendChild(ol);
   }
 
-  // associate an event with dog element...
+  this.setTimeout(function () {
+    next.remove();
+    load.remove();
+  }, 3000);
 
-  //   dog.addEventListener("click", handleClick);
-
-  //   function handleClick(e) {
-  //     dog.src =
-  //       "https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZG9nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60";
-
-  //     e.stopPropagation();
-  //   }
+  this.setInterval(function () {
+    dog.src = nextDogImageUrl();
+  }, 1000);
 });
+
+// setTimeout();
+// setInterval();
