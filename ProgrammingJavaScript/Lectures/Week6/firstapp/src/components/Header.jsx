@@ -1,15 +1,17 @@
 import PropTypes from "prop-types";
+import Button from "./Button";
 
 function Header({ title, msg }) {
-  // var t = props.title;
-  // var m = props.msg;
-
-  // var { title, msg } = props;
-
+  const someFunc = () => {
+    console.log("I am some Function");
+  };
   return (
     <>
       <h3 style={headingStyle}>{title}</h3>
       <p>{msg}</p>
+      <Button color="red" text="Hello" func={someFunc} />
+      {/* <Button color="green" text="Play" />
+      <Button color="yellow" text="Warnin" /> */}
     </>
   );
 }
@@ -25,8 +27,20 @@ Header.propTypes = {
 };
 
 var headingStyle = {
-  color: "green",
+  color: "red",
   backgroundColor: "black",
 };
 
 export default Header;
+
+// var t = props.title;
+// var m = props.msg;
+
+// var { title, msg } = props;
+
+{
+  /* <button className="btn">Add</button> */
+}
+{
+  /* instead of creating button like above */
+}
