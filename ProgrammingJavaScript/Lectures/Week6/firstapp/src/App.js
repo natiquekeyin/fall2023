@@ -11,9 +11,10 @@ function App() {
     <>
       <div className="App">
         <h1>First React Application</h1>
-        <Header title="Hello" msg="This is the first user defined component" />
+        <About />
+        {/* <Header title="Hello" msg="This is the first user defined component" /> */}
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

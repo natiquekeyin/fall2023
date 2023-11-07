@@ -9,7 +9,7 @@ function Header({ title, msg }) {
     <>
       <h3 style={headingStyle}>{title}</h3>
       <p>{msg}</p>
-      <Button color="red" text="Hello" func={someFunc} />
+      <Button color="green" text="Hello" func={someFunc} />
       {/* <Button color="green" text="Play" />
       <Button color="yellow" text="Warnin" /> */}
     </>
