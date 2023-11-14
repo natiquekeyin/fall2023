@@ -16,10 +16,9 @@ import { useState } from "react";
 //         onClick={() => {
 //           setX("College");
 
-//           setNum(num + 1);
+//           setNum(num + 5);
 //         }}
 //       >
-//         {" "}
 //         Change
 //       </button>
 //     </div>
@@ -44,46 +43,70 @@ import { useState } from "react";
 
 // export default Temp1;
 
+// const Temp1 = () => {
+//   const obj = {
+//     name: "Alan Smith",
+//     age: 29,
+//     height: 5.33,
+//     isYoung: true,
+//   };
+
+// let changeState = () => {
+//   setPerson({
+//     name: "Bob Smith",
+//     age: 45,
+//     height: 5.4,
+//     isYoung: false,
+//   });
+// };
+
+// let changeState = () => {
+//   setPerson({
+//     name: "Bob Smith",
+//   });
+// };
+
+//   let changeState = () => {
+//     setPerson((previousState) => {
+//       return {
+//         ...previousState,
+//         age: 45,
+//       };
+//     });
+//   };
+//   // spread the previous state values and update the age to 45
+//   const [person, setPerson] = useState(obj);
+//   return (
+//     <div>
+//       <h1>{person.name}</h1>
+//       <h1>{person.age}</h1>
+//       <h1>{person.height}</h1>
+//       <h1>{person.isYoung.toString()}</h1>
+//       <button onClick={changeState}>Change</button>
+//     </div>
+//   );
+// };
+
+// export default Temp1;
+
 const Temp1 = () => {
-  const obj = {
-    name: "Alan Smith",
-    age: 29,
-    height: 5.33,
-    isYoung: true,
-  };
+  let num = [10, 20, 30, 40];
+  let [numbers, setNumbers] = useState(num);
 
-  //   let changeState = () => {
-  //     setPerson({
-  //       name: "Bob Smith",
-  //       age: 45,
-  //       height: 5.4,
-  //       isYoung: false,
-  //     });
-  //   };
-
-  //   let changeState = () => {
-  //     setPerson({
-  //       name: "Bob Smith",
-  //     });
-  //   };
-
-  let changeState = () => {
-    setPerson((previousState) => {
-      return {
-        ...previousState,
-        name: "Bob Smith",
-      };
+  let changeList = () => {
+    setNumbers((previousState) => {
+      return [...previousState, Math.floor(Math.random() * 50)];
     });
   };
 
-  const [person, setPerson] = useState(obj);
   return (
     <div>
-      <h1>{person.name}</h1>
-      <h1>{person.age}</h1>
-      <h1>{person.height}</h1>
-      <h1>{person.isYoung.toString()}</h1>
-      <button onClick={changeState}>Change</button>
+      <ul>
+        {numbers.map((n, i) => (
+          <li key={i}>{n}</li>
+        ))}
+      </ul>
+      <button onClick={changeList}>Change</button>
     </div>
   );
 };
