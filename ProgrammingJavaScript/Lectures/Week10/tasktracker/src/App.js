@@ -19,12 +19,29 @@ function App() {
   // to make state variable global and transerferable to ANY component we put them in App.js...
   // tasks is now a state variable with initial value set to an array []... and we can use setTasks to change the state of tasks -VA
 
+  const deleteTask = (id) => {
+    // console.log("delete", id);
+    // filter funciton will filter all the tasks...leaving out the task with the id.. given in paramter...
+    setTasks(tasks.filter((task) => task.id != id));
+  };
+
+  const toggleReminder = (id) => {
+    // console.log("hello", id);
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      )
+    );
+  };
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks} />
-
-      {/* <Temp1 /> */}
+      {tasks.length > 0 ? (
+        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
+      ) : (
+        "No tasks to show"
+      )}
     </div>
   );
 }

@@ -14,11 +14,16 @@ import Task from "./Task";
 
 // We actually never define tasks or objects like this, rather we either fetch them through an API or any other resource - that might mean that we store the state in APP.js only and transfer the state from component to component to read them .. and to update them.... But here for understanding we are defining our own objects...
 
-const Tasks = ({ tasks }) => {
+const Tasks = ({ tasks, onDelete, onToggle }) => {
   return (
     <div>
       {tasks.map((task) => (
-        <Task task={task} />
+        <Task
+          key={task.id}
+          task={task}
+          onDelete={onDelete}
+          onToggle={onToggle}
+        />
       ))}
     </div>
   );
