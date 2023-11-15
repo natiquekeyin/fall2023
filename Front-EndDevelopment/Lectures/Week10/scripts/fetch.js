@@ -1,17 +1,17 @@
 document.querySelector("#btn1").addEventListener("click", loadData);
 
-function loadData() {
-  fetch("./data/data.txt")
-    .then((res) => {
-      return res.text();
-    })
-    .then((data) => {
-      document.querySelector("#output").innerText = data;
-    })
-    .catch((err) => {
-      console.log("Not recieved", err);
-    });
-}
+// function loadData() {
+//   fetch("./data/data.txt")
+//     .then((res) => {
+//       return res.text();
+//     })
+//     .then((data) => {
+//       document.querySelector("#output").innerText = data;
+//     })
+//     .catch((err) => {
+//       console.log("Not recieved", err);
+//     });
+// }
 
 // left btn2 for your own practice...
 
