@@ -2,10 +2,15 @@ import logo from "./logo.svg";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import Temp1 from "./components/Temp1";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AddTask from "./components/AddTask";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    console.log("hello");
+  });
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -34,14 +39,27 @@ function App() {
     );
   };
 
+  const addTask = (task) => {
+    // console.log(task);
+
+    const id = Math.floor(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    setTasks([...tasks, newTask]);
+  };
+
   return (
     <div className="container">
-      <Header />
+      <Header
+        onAdd={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}
+      />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
       ) : (
         "No tasks to show"
       )}
+
+      {showAddTask && <AddTask onAdd={addTask} />}
     </div>
   );
 }

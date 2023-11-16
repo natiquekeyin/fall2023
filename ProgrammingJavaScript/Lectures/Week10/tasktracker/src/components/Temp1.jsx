@@ -89,26 +89,32 @@ import { useState } from "react";
 
 // export default Temp1;
 
-const Temp1 = () => {
-  let num = [10, 20, 30, 40];
-  let [numbers, setNumbers] = useState(num);
+// const Temp1 = () => {
+//   let num = [10, 20, 30, 40];
+//   let [numbers, setNumbers] = useState(num);
 
-  let changeList = () => {
-    setNumbers((previousState) => {
-      return [...previousState, Math.floor(Math.random() * 50)];
-    });
-  };
+//   let changeList = () => {
+//     setNumbers((previousState) => {
+//       return [...previousState, Math.floor(Math.random() * 50)];
+//     });
+//   };
 
-  return (
-    <div>
-      <ul>
-        {numbers.map((n, i) => (
-          <li key={i}>{n}</li>
-        ))}
-      </ul>
-      <button onClick={changeList}>Change</button>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <ul>
+//         {numbers.map((n, i) => (
+//           <li key={i}>{n}</li>
+//         ))}
+//       </ul>
+//       <button onClick={changeList}>Change</button>
+//     </div>
+//   );
+// };
 
-export default Temp1;
+// export default Temp1;
+
+// Hooks: 1. useState()
+// 2. useEffect()  is used to produce some side effects.. like bringing data from an api or resource.. useEffect runs either with every rendering of the component or every change in a state variable OR only once...
+//  useEffect(()=>{},[]);  ONLY ONCE
+//  useEffect(()=>{}); With every re-rendering
+//  useEffect(()=>{},[num]) With every change in num state variable...
