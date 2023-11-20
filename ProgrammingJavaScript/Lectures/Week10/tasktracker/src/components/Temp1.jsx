@@ -2,7 +2,7 @@
 // Hooks represent the state of a component...what are the values in a particular component at a particular time.
 // 1. useState() hook...
 
-import { useState } from "react";
+// import { useState } from "react";
 
 // const Temp1 = () => {
 //   const [x, setX] = useState("Keyin");
@@ -118,3 +118,43 @@ import { useState } from "react";
 //  useEffect(()=>{},[]);  ONLY ONCE
 //  useEffect(()=>{}); With every re-rendering
 //  useEffect(()=>{},[num]) With every change in num state variable...
+
+import { useState, useEffect } from "react";
+
+// const Temp1 = () => {
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     setTimeout(() => {
+//       setCount((count) => count + 1);
+//     }, 1000);
+//   }, []);
+
+//   return <h1>The count is renderd {count} times!</h1>;
+// };
+
+// export default Temp1;
+
+const Temp1 = () => {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const res = await fetch("https://reqres.in/api/users");
+      const data = await res.json();
+      console.log(data);
+      setUsers(data.data);
+    };
+
+    fetchUsers();
+  }, []);
+
+  return (
+    <div>
+      {users.map((user) => (
+        <h5>{user.email}</h5>
+      ))}
+    </div>
+  );
+};
+
+export default Temp1;

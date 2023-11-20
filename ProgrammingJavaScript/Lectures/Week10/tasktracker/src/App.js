@@ -60,8 +60,12 @@ function App() {
       )}
 
       {showAddTask && <AddTask onAdd={addTask} />}
+
+      {/* <Temp1 /> */}
     </div>
   );
 }
 
 export default App;
+
+// Deploy this applicaiton!
