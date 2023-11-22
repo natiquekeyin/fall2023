@@ -5,6 +5,9 @@ import Temp1 from "./components/Temp1";
 import { useState, useEffect } from "react";
 import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import TaskDetails from "./components/TaskDetails";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -84,21 +87,39 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <Header
-        onAdd={() => setShowAddTask(!showAddTask)}
-        showAdd={showAddTask}
-      />
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
-      ) : (
-        "No tasks to show"
-      )}
+    <Router>
+      <div className="container">
+        <Header
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
+        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                {tasks.length > 0 ? (
+                  <Tasks
+                    tasks={tasks}
+                    onDelete={deleteTask}
+                    onToggle={toggleReminder}
+                  />
+                ) : (
+                  "No tasks to show"
+                )}
 
-      {showAddTask && <AddTask onAdd={addTask} />}
+                {showAddTask && <AddTask onAdd={addTask} />}
+              </>
+            }
+          />
 
-      <Footer />
-    </div>
+          <Route path="/about" element={<About />} />
+          <Route path="/temp1" element={<Temp1 />} />
+          <Route path="/task/:id" element={<TaskDetails />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
@@ -110,3 +131,4 @@ export default App;
 // API has different DELETE.. POST(inserting new), PUT(updates...)
 
 // React Router DOM:for making routes and links in react applications
+// The add button should only appear on home page.. "useLocation" react-router-dom
