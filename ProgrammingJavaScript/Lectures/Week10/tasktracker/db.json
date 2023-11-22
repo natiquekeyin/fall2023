@@ -13,22 +13,10 @@
       "id": 2
     },
     {
-      "text": "asesd",
-      "day": "sdfsd",
-      "reminder": false,
-      "id": 3
-    },
-    {
-      "text": "sdfdsf",
-      "day": "sdfsdf",
-      "reminder": false,
-      "id": 4
-    },
-    {
-      "text": "sdfsd",
-      "day": "sdfds",
+      "text": "sdf",
+      "day": "sdf",
       "reminder": true,
-      "id": 5
+      "id": 3
     }
   ]
 }
