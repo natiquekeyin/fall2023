@@ -4,34 +4,63 @@ import Tasks from "./components/Tasks";
 import Temp1 from "./components/Temp1";
 import { useState, useEffect } from "react";
 import AddTask from "./components/AddTask";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
   useEffect(() => {
-    console.log("hello");
-  });
+    const getTasks = async () => {
+      const tasksFromServer = await fetchTasks();
+      setTasks(tasksFromServer);
+    };
+
+    getTasks();
+  }, []);
+
+  // for fetching tasks ...
+
+  const fetchTasks = async () => {
+    const res = await fetch("http://localhost:5000/tasks");
+    const data = await res.json();
+    // console.log(data);
+    return data;
+  };
+
+  const fetchTask = async (id) => {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const data = await res.json();
+    return data;
+  };
+
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: "School appointment",
-      day: "November 10 at 1pm",
-      reminder: true,
-    },
-    { id: 2, text: "GYM", day: "November 15 at 10pm", reminder: false },
-    { id: 3, text: "Meeting", day: "December 10 at 3 pm", reminder: true },
-  ]);
+  const [tasks, setTasks] = useState([]);
   // to make state variable global and transerferable to ANY component we put them in App.js...
   // tasks is now a state variable with initial value set to an array []... and we can use setTasks to change the state of tasks -VA
 
-  const deleteTask = (id) => {
+  const deleteTask = async (id) => {
     // console.log("delete", id);
     // filter funciton will filter all the tasks...leaving out the task with the id.. given in paramter...
+    // setTasks(tasks.filter((task) => task.id != id));
+
+    await fetch(`http://localhost:5000/tasks/${id}`, { method: "DELETE" });
+
     setTasks(tasks.filter((task) => task.id != id));
   };
 
-  const toggleReminder = (id) => {
+  const toggleReminder = async (id) => {
     // console.log("hello", id);
+
+    const taskToToggle = await fetchTask(id);
+    const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
+
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(updTask),
+    });
+
     setTasks(
       tasks.map((task) =>
         task.id === id ? { ...task, reminder: !task.reminder } : task
@@ -39,12 +68,19 @@ function App() {
     );
   };
 
-  const addTask = (task) => {
-    // console.log(task);
+  const addTask = async (task) => {
+    const res = await fetch("http://localhost:5000/tasks", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(task),
+    });
 
-    const id = Math.floor(Math.random() * 10000) + 1;
-    const newTask = { id, ...task };
-    setTasks([...tasks, newTask]);
+    const data = await res.json();
+    // console.log(task);
+    setTasks([...tasks, data]);
+    // const id = Math.floor(Math.random() * 10000) + 1;
+    // const newTask = { id, ...task };
+    // setTasks([...tasks, newTask]);
   };
 
   return (
@@ -61,7 +97,7 @@ function App() {
 
       {showAddTask && <AddTask onAdd={addTask} />}
 
-      {/* <Temp1 /> */}
+      <Footer />
     </div>
   );
 }
@@ -69,3 +105,8 @@ function App() {
 export default App;
 
 // Deploy this applicaiton!
+// setting up a server.. by using "serve"
+// JSON Server..
+// API has different DELETE.. POST(inserting new), PUT(updates...)
+
+// React Router DOM:for making routes and links in react applications
