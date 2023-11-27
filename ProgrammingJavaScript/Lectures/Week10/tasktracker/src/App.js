@@ -7,7 +7,7 @@ import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import TaskDetails from "./components/TaskDetails";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -93,6 +93,8 @@ function App() {
           onAdd={() => setShowAddTask(!showAddTask)}
           showAdd={showAddTask}
         />
+        <Link to="/about">About</Link>|<Link to="/">Home</Link>|{" "}
+        <Link to="/temp1">Temp1</Link>
         <Routes>
           <Route
             path="/"

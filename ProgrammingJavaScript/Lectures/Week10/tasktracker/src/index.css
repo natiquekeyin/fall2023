@@ -89,3 +89,16 @@ footer {
   text-align: center;
   margin-top: 20px;
 }
+
+.taskD {
+  border: 1px solid gray;
+  border-radius: 9px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.taskD p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
