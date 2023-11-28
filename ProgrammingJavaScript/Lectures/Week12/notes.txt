@@ -51,10 +51,23 @@ npm run test ... the command to run tests...[NB]
 WHAT IS A TEST?
 
 const addPeriod = (s)=>{
-    return `${s}!`;
+    //return `${s}.`;
+    // return s + ".";
+    //return s+ '.';
     }
 
-const actual = addPeriod("Hello World");//output: Hello World!
+const print10=()=>{
+    for(var i=1;i<=10;i++){
+        console.log(i);
+    }
+}
+
+const print10 = ()=>{
+    console.log(1);
+    console.log(2);
+}
+
+const actual = addPeriod("Hello World");//output: Hello World.
 const expected = "Hello World.";
 
 try{
@@ -93,3 +106,40 @@ File name conventions:
  1. Files with .test.js or .test.jsx suffix
  2. FIles with .spec.js or .spec.jsx suffix
  3. Files with .js or .jsx suffix in __tests__
+
+
+ November 28,2023:
+
+ Assertions: When writing tests, we often need to check that values meet certain conditions..assertions decide if a test passes or fails..
+
+ expect()... Asertion:
+            Matcher functions: the functions used to implement the assertion..
+
+ expect("hello").toBeInTheDocument(); //pass if document contains string "hello" and fails otherwise!
+
+ WHAT TO TEST?
+    Test component renders
+    Test componenet renders with props
+    Test component renders in different states
+    Test component reacts to events..
+
+WHAT NOT TO TEST?
+    Implementation details
+    Third party code
+    Code that is not important from a user point of view...
+
+<nav>Navigational element</nav>
+<footer>this is footer info </footer>
+<b>Bold text</b>... <strong>bold text</strong>
+
+<li role="button">Some text</li>
+<button role="button">SOme text</button>
+
+RTL Queries:
+
+getBy
+
+getByRole( )
+
+test.only(); only run this test out of a group
+test.skip(); skip this one from a group
