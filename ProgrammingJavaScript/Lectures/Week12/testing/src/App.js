@@ -6,7 +6,7 @@ function App() {
   const skills = ["Hello", "world"];
   return (
     <div className="App">
-      <Skills skills={skills} />
+      {/* <Skills skills={skills} /> */}
       <Events />
       learn react
     </div>
