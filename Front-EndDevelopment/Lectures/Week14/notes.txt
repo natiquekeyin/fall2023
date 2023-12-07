@@ -1,0 +1,35 @@
+Prototypal Inheritance: User(){ } ....  var obj1 = new User();
+PI is classical way javascript used to acheive OOP. Now "Class" is the ES5 Es6 way(new way) of acheiving OOP.[More standard way...using class and objects]
+
+
+Functional programming/Structured programming: [We have already done it..]
+
+Object Oriented Programming:
+    "Consider everything as an object and work with it"
+
+ 1. Class: A blue print for creating objects.
+     Code and data [ Code are the functions & Data are the fields on which we run functions]
+
+ 2. Object: is an instantiation of a class that can be used to utilize class features.
+
+
+ // Object Oriented Programming...
+
+// Syntax of a class
+
+// class Book {}
+
+// Syntax of creating an object
+
+// var book = new Book();
+
+Each class has a special method "constructor" which is:
+    1. automatically called when we create the object of the class!
+    2. It initializes the state of the object...
+    3. It has the same name as class name (NOT IN JAVASCRIPT - "constructor")
+
+How to create object by providing values for constructor:
+
+var book = new Book("JavaScript", "Ivor", 1234);
+
+console.log(book.author);
