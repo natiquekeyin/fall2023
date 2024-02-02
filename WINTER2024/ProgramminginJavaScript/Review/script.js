@@ -1,3 +1,4 @@
+// Review session code:
 // function add(num) {
 //   for (var i = 1; i < num; i++) {
 //     console.log(i);
