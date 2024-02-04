@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Alan Smith",
+    "email": "alan@gmail.com",
+    "phone": "123-456-7890"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "email": "bob@gmail.com",
+    "phone": "342-456-7890"
+  },
+  {
+    "id": 3,
+    "name": "Chrisitina Smith",
+    "email": "chris@gmail.com",
+    "phone": "123-333-7890"
+  },
+  {
+    "id": 4,
+    "name": "Doug Myer",
+    "email": "doug@gmail.com",
+    "phone": "111-456-7890"
+  }
+]

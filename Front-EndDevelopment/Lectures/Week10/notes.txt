@@ -1,0 +1,21 @@
+We want some code to wait for other code execution for accurate/current data...
+
+To do asynchronous programming in javaScript
+    1. callback functions...
+    2. Promises ...(Just like real world promises...fullfilled..notfullfilled)
+        resolve(); // promise fullfilled
+        reject(); // promise not fullfilled...
+    3. Async/await ...
+
+
+AJAX based techniques: Asynchronous JavaScript and XML:
+
+1. XmlHttpRequest (XHR) Object:
+    API to acheive, A way to tranfser data between client and server.. it can work with data like JSON, plain text etc.
+
+    API endpoints: Diffent websites provide API endpoints throught which we can get data out of those sites..
+    a) Keyin schedule - keyin will provide an api endpoint to read that. For example: www.keyin.com/schedule/all
+    b) BBC tweets- www.twitter.com/bbc/tweets ... 
+    c)  www.facebook.com/manny/friendslist
+
+2.FetchAPI (it returns promises)

@@ -1,0 +1,66 @@
+Welcome to Front-end!
+
+URL: Uniform Resource Locator!
+
+https://www.keyin.com:443?name=Alan
+
+https -> hypertext transfer protcol secure
+    protocol is a way of communication on web (www)
+    the internet & world wide web ??? Are they same OR different???
+    Network of networks internet
+    www is a way to accesss resources by using internet!
+
+    www uses different protocols for this communication! TCP/IP, HTTP, HTTPS, FTP
+
+    To secure our end-to-end communication www uses https.
+
+    Domain Name: which maps human understandable names with IP address(x.x.x.x)
+
+    Port no: ~65532
+    http://  80
+    https:// 443
+
+    http://127.0.0.1/index.html:3000
+
+    Protocol+domain+port = Origin! (Secure communication)
+
+    Query String: Extra information sent with url...
+
+    https://en.wikipedia.org/wiki/HTML?useskin=modern
+
+
+Lecture September 13
+
+1. Tag: < sometext >... <b>,<h1>,<p>
+2. Element: <h1>Some content </h1>
+    <p>Any text</p>
+    Empty Elements:
+    <br /> An element without contents...
+    <img />, <hr/>
+3. Attributes:
+    The properties of elements <div id="para1">hello</div>... id is called attribue of <div> tag..
+4. Entities: & ;
+    &lt; &gt;
+
+IF something starts with <!... It is not an element.. an announcement or any other special thing..
+
+Three main SYNTACTICAL(RULES OR GRAMMAR OF THE LANGUAGE) sections of HTML document:
+
+<html></html> Everything goes inside this element...
+<head></head> Always executes/interpretes first whereever you place it..Scripts...styling and meta information inside head section..
+<body></body> everything you want to show user...
+
+A VALID html document should ALWAYS have above three sections..THEY ARE MANDATORY SECTIONS FOR A WEBPAGE..
+
+SEMANTICAL SECTIONS:
+
+    <header></header>....NOT <head> NOT mandatory ..it comes inside <body> element always..
+    Introductory section of a web page..
+    <main> </main> ...The main contents of an article...
+    <footer></footer>... that displays footer information..
+    <section> </section>....for some special sectioning
+    <aside></aside>... SOmething related to the main content, BUT NOT MANDATORY..
+    <nav></nav> Navigation element...
+
+    Heading levels:
+    <h1> will always the most important or main heading of a page even though the size of text of h1 is made smallest...SEMANTICAL MEANING..

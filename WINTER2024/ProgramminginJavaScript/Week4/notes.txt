@@ -1,0 +1,110 @@
+Review of Last weeks!
+
+Statements: 
+ In most of languages,statements end at a semi colon ";"{statement terminator}.
+
+Blocks:
+ block is a combination of { .{ ... }... }
+
+Functions:
+  Primary building block of JavaScript.Reusable piece of codes that we write once and use as many times as we want...
+
+  function foo( ){   }
+   keyword
+   name of the function [foo] 
+   () The paranthesis tell us that foo is a function, paranthesis consist of the list of parameters that a function will accept.
+   { } The body of the function...
+
+   function juicer(apples){ xxxxxxx.... return juice;}
+
+   JUICER IS A FUNCTION THAT ACCEPTS APPLES AND RETURN JUICE.
+
+   function juicer( ){ return juice;}
+   function juicer(oranges){    }
+
+Variables:
+    var, let or const keywords are used to define variables in javascript..
+
+    var has a function level scope
+    let has a block level scope...
+    const has a constant value.. CAN NOT BE CHANGED...
+  
+Data types in JavaScript:
+ 1. Number 
+ 2. String
+
+Operators:
+ +
+ - 
+ *
+ / 
+ %
+
+ ++ Increment  
+ -- Decrement 
+ Pre increment/Decrement
+ Post increment/decrement
+
+ Assignment: =
+ x=10;
+ Equality: ==
+ if(x==10)
+
+ coercion!
+
+ === "strict equality operator"...
+
+ What is an expression????
+         Something that evaluates to a value
+         2+2   -> 4
+         x+5    -> add 5 to x
+         x==5    -> true.. false
+
+         let x=10; //equation??
+        R.H.S or L.H.S of an equation is an expression...
+
+ Functions:
+  A subprogram, or a smaller portion of code that can be called (i.e invoked) by another part of your program, or by another function or by the environment to some user actions...(clicking a button might call a function and so on...)
+
+  UDF: User defined Functions
+  PDF: Pre-defined functions
+
+  User Defined Functions:
+    Functions written by users...
+
+    Three forms of UDFs:
+      i) Function Declarations
+      ii) Function expressions
+      iii) Arrow Functions... 
+    
+    1. Function Declarations:
+
+
+      function foo(){
+
+      }
+
+      function square(n){
+        return n*n;
+      }
+
+      function add(a,b){
+        return a+b;
+      }
+
+      foo(); //calling the function
+      square(5); // return 25
+      add(1,2); //return 3
+    
+    2. Function Expressions:
+
+    let foo = function(){   };
+
+    let square = function(n){ return n* n};
+
+    let add = function(a,b){
+      return a+b;
+    }
+       
+
+

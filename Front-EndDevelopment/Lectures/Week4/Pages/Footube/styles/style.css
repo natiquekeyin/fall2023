@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  color: gray;
+  height: 100%;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+#menu {
+  width: 75px;
+  text-align: center;
+}
+
+#search-wrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+#search-wrapper input {
+  flex: 1;
+  max-width: 500px;
+  font-size: 1em;
+  padding-left: 20px;
+  border: 1px solid lightgray;
+}
+#search-wrapper button {
+  color: dimgray;
+  border: 1px solid lightgray;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+#user-options {
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+}
+
+#user-options > span {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#sign-in {
+  color: blue;
+  background-color: white;
+  border: 1px solid blue;
+  padding: 5px 15px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+#sign-in span {
+  vertical-align: middle;
+}
+
+main {
+  height: 100%;
+  display: flex;
+}
+
+nav {
+  width: 75px;
+}
+
+nav div {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 25px;
+  color: gray;
+}
+
+nav div p {
+  margin: 5px;
+}
+
+main section {
+  flex: 1;
+  background-color: #f7f7f7;
+  margin-top: 10px;
+  overflow: hidden;
+  height: 100%;
+  padding-left: 20px;
+}
+
+#content {
+  max-width: 700px;
+}
+
+#filter {
+  font-size: 0.9em;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+}
+
+#filter span {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.video-card-wrapper {
+  display: flex;
+  margin-bottom: 15px;
+  max-width: 700px;
+  max-height: 300px;
+}
+
+.video-card-image {
+  position: relative;
+}
+
+.video-card-image p {
+  position: absolute;
+  bottom: 15px;
+  right: 2px;
+  color: white;
+  background-color: black;
+  padding: 1px 3px;
+  z-index: 100;
+  font-size: 0.9rem;
+}
+
+.video-card-info {
+  margin-left: 15px;
+}
+
+.video-card-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.video-card-info h3 {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.video-card-info p {
+  margin: 14px;
+  font-size: 0.8rem;
+  color: black;
+}

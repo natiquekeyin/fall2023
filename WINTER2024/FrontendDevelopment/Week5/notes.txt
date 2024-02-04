@@ -1,0 +1,57 @@
+Tables in HTML:
+    Rows and column arrangment of data/something...tabular..
+    Previously, tables were used to arrange all the contents of a webpage..(which is not the case anymore..)
+
+    <table></table>... All table comes inside this element..
+    <thead></thead>... row(s) at the top of the table (header row or rows)
+    <tbody></tbody>....rows that form the main body of the table (table's content rows)
+    <tfoot></tfoot> row(s) at the botton of the table...
+
+
+    We define rows and columns of data within above using the following..
+    <tr>..</tr> a single row in a table..
+    <td>...</td> a single cell (row/column intersection) that contains table data...
+    <th>..</th> a header (e.g title for  a column)
+
+Forms in HTML:
+    Integral part of any type of applications. We use forms to take input from users...
+
+<form></form>
+<input/>
+
+<form> </form> element has some attributes:
+    action: defines the URL where the data should be sent when submitted...
+    method:tells the browser which HTTP method to use when submitting the data to the URL defined in action....
+    GET & POST
+    GET: data goes as part of URL
+    POST: data goes as part of teh body of the document(NOT URL)
+
+    for any form field, name is used to take out value of that field on other/same page...id is used to give it a styling or recognizing this element in scripts...
+
+Before HTML5, html was also used to apply some of the stylings on pages..but in HTML5 the CSS is now sole responsible for stylings and HTML is only used for structuring out the element.
+
+CSS (cascading style sheets):
+ CSS is the way to give stylings to the webpage!Different colors styles etc...
+
+ CSS syntax:
+    1.Selector: which element is to be styled on..
+    2.Set of rules /styles to be applied..
+
+Where we can put CSS?
+    1.Inline style: when we define style within the element.
+    2.Internal style: When we define style in the <head> section of the docuemnt.
+    3.External style: When we define a .css file and link it to the document...
+    4.Browser style/user agents style sheet is applied by default on all html
+
+What can be the selectors?
+ 1. Tag selector ( h1, p, h2, img, div)
+ 2. ID selectors (#media, #p1.etc...) ONLY one element can have one ID on a webpage
+
+ 3. Class selectors (.demo, .red , .heading)
+
+4. Contextual selector:
+
+5. Grouping of selectors:
+
+6. Containers for Styling:
+

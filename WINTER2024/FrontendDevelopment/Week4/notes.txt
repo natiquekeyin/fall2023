@@ -1,0 +1,82 @@
+
+January 25,2024
+
+
+What is tag in HTML?
+A tag is something that starts with "<" and ends with ">".
+<a>
+<table>
+<html>
+<head>
+
+
+What is element in HTML?
+<a>Some contents </a>
+
+Tag + content + ending tag
+
+is called element.
+
+<a>Hello</a>
+
+Empty Element:
+<meta /> Self closing/ Empty element
+<meta /> 
+<br/>
+<hr/>
+<img/>
+<input/>
+
+
+Sections in an HTML Document:
+1. <html></html> EVERYTHING OF A WEBPAGE WILL COME INSIDE THIS...
+
+
+2. <head></head> ONLY <TITLE> IS SHOWN ON THE DOCUMENT, ALL OTHER ELEMENTS HERE ARE CALLED META ELEMENTS.. (ELEMENTS ABOUT ELEMENTS) MAY CONTAIN THE KEYWORDS THAT YOU WANT GOOGLE TO USE WHILE SOMEONE SEARCHING FOR A WEBSITE OF YOUR TOPIC....ALWAYS HEAD SECTION IS INTERPRETED FIRST...
+
+
+3. <body></body> Everything that you want to show to user should be in the <body> element...
+
+
+
+SYNTACTCALLY AN HTML DOCUMENT WILL NOT BE CALLED AN HTML DOCUMENT IF IT IS MISSING ANY OF THE ABOVE 3 SECTIONS.
+
+127.0.0.1 ??? LOCAL HOST /HOME/LOOP BACK ADDRESS..
+
+"THERE IS NO SUCH PLACE ON EARTH LIKE 127.0.0.1"
+WE MAKE OUR OWN MACHINE AS SERVER AND ACCESS THE WEBSITES...
+
+
+Semantical Elements:
+1.<nav>... </nav> All the navigational links of the web page...
+2.<header>...</header> Introductory part of the web page - Never ever confuse this <header> with <head>...??? Never ever replace <head> with <header>
+3. <footer>..</footer>... some footer information like links copyrights etc....
+4. <main>..<main>.. The main content of the given page.. Never ever confuse <main> ..with <body>{syntactical requirement} .. but <main> is an optional one...:)
+5. <section>....</section>
+6. <aside>...</aside> for some side information which might not be directly related to the content but useful..
+7. <h1></h1>...<h6></h6>
+
+Absolute and Relative linking:
+
+Absolute path: that contains complete path with the root and everything...
+
+Relative Path: is relative to the root folder.
+ALWASY USE RELATIVE PATH WHILE MAKING A WEBPAGE...
+
+Segmentation: We define a segment with "id" attribute and can do a lot of usefull things with that area...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

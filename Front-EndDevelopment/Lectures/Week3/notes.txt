@@ -1,0 +1,27 @@
+CSS: Cascading Style Sheet..
+
+Rules:
+
+1. Selector
+2. the declarations
+
+Types of Selectors:
+1. Tag/Type selector...
+2. Class selector.. (  we dfine a class witha a period .demo { })
+3. ID selectors... ( #some{}   ONLY one element can use it.. as id should be unique for eeach element)
+4. Contextual selectors:(some element within other element)
+5.Grouping selectors
+
+WHERE TO PUT CSS:
+1. Inline css (Style within the element decalartion..)
+2. Internal CSS When we define style in the head..
+3. External CSS **
+
+UNITS IN CSS:
+1. em
+2. rem
+3. px
+4. PUT
+5. vw
+6. vh
+

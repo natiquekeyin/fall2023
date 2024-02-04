@@ -1,0 +1,145 @@
+Testing: 
+    build software that works!
+    we write tests to check that!
+    to check whether our software works as expected!!!!
+
+1.Manual Testing:
+    opens the website, interacts with it in all possible ways and ensure everything is working.
+    if a new feature is released, we repeat the same steps!
+
+    Problems in MT:
+    a. Time consuming
+    b. Complex repetivite tasks have a risk of human error.
+    c. In large-scale application, we might not be able to test ALL the features...
+
+2. Automated Testing:
+    programs that automate the task of testing the software....
+    additional effort is required,but once done, it can be used for long...
+
+    Advantages of Automated Testing:
+    a. Not time consuming...
+    b. Reliable, consistent and not error prone..
+    c. Easy to identify and fix features that break tests...
+    d. Give confidence when shipping the software.
+
+Jest (JavaScript testing framework) & RTL (React Testing Library)
+Jest:
+    is a javascript testing framework.
+    is a test runner that finds tests, run the test, determines where the tests are passed or failed...and reports it back in a humar readable manner.
+RTL:
+    testing utility that provides "Virtual DOM" for testin react components.[imitates the react-DOM and works with that...]
+    Virtual DOM can be used to interact and verify the behavior of a react component
+
+THe core library is called "DOM Testing Library" and RTL is simply a wrapper around the core library to test React Applications in an easier way...
+
+November 27,2023:
+
+Types of Tests:
+    1. Unit tests
+    2. Integration Tests
+    3. End to End Tests(e2e)
+
+    1. Unit Tests:
+        Testing of individual building blocks of an application. Each unit is tested in Isolation, independent of other units.Run in a short amount of time and make it very easy to pinpoint failues..Relatively easier to write and maintain...
+    2. Integration Tests:
+        Testing of a combination of units and ensuring they work together. 
+    3. End to End Tests( E2E tests):
+        Testing the ENTIRE application flow and ensuring it works ad designed .. from start to finish. It involves a real UI, a real backend database, real services etc..Takes the longest time, cost of implication is involved, because we might interact with real APIs (PAID) that charge based on the number of requests..
+
+npm run test ... the command to run tests...[NB]
+
+WHAT IS A TEST?
+
+const addPeriod = (s)=>{
+    //return `${s}.`;
+    // return s + ".";
+    //return s+ '.';
+    }
+
+const print10=()=>{
+    for(var i=1;i<=10;i++){
+        console.log(i);
+    }
+}
+
+const print10 = ()=>{
+    console.log(1);
+    console.log(2);
+}
+
+const actual = addPeriod("Hello World");//output: Hello World.
+const expected = "Hello World.";
+
+try{
+if(actual !== expected){
+    throw new Error("Test not passed);
+}
+}catch()
+
+WHAT WE NEED TO WRTIE TESTS IN REACT:
+    a. node js (YES)
+    b. git (?)
+
+Syntax of a test is 
+
+test(name,fn,timeout*)
+
+How to run tests?
+
+npm run test ... tests are run in watch mode..keep an eye on all the changed files that have not been committed yet, it runs all the tests all the tests from them..
+
+
+Test Driven Develoment(TDD):
+    TDD is a software development process where you write tests BEFORE writing the software code.
+    ONce the tests have been written, you then write the code to ensure the tests pass.
+    a. Create Tests that verify the functionality of a specific features.
+    b. Write code that will run the tests successfully when re-executed..
+    c. Refactor the code for optimiztion while ensuring the tests continue to pass..
+
+    Red-green testing! as all tests go from a red "Failed" state to a green "Passed" state.
+
+
+    Jest Watch Mode:
+        is an option that we can pas to jest asking to watch files that have changed since the last commit and execute the test related only to those change files..
+
+File name conventions:
+ 1. Files with .test.js or .test.jsx suffix
+ 2. FIles with .spec.js or .spec.jsx suffix
+ 3. Files with .js or .jsx suffix in __tests__
+
+
+ November 28,2023:
+
+ Assertions: When writing tests, we often need to check that values meet certain conditions..assertions decide if a test passes or fails..
+
+ expect()... Asertion:
+            Matcher functions: the functions used to implement the assertion..
+
+ expect("hello").toBeInTheDocument(); //pass if document contains string "hello" and fails otherwise!
+
+ WHAT TO TEST?
+    Test component renders
+    Test componenet renders with props
+    Test component renders in different states
+    Test component reacts to events..
+
+WHAT NOT TO TEST?
+    Implementation details
+    Third party code
+    Code that is not important from a user point of view...
+
+<nav>Navigational element</nav>
+<footer>this is footer info </footer>
+<b>Bold text</b>... <strong>bold text</strong>
+
+<li role="button">Some text</li>
+<button role="button">SOme text</button>
+
+RTL Queries:
+
+getBy
+
+getByRole( )
+
+test.only(); only run this test out of a group
+test.skip(); skip this one from a group

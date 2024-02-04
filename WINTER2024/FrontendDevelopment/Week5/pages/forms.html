@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+  <body>
+    <h3>Job Registration Form</h3>
+
+    <div>
+      <form action="/data" method="get">
+        <div>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            autofocus
+            autocomplete="given-name"
+            placeholder="Enter your name here"
+            maxlength="30"
+            tabindex="1"
+          />
+        </div>
+
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            placeholder="Enter your email here"
+            tabindex="2"
+          />
+        </div>
+
+        <div>
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" tabindex="3" />
+        </div>
+
+        <div>
+          <label for="position">Position</label>
+          <input
+            type="text"
+            id="position"
+            name="position"
+            tabindex="4"
+            list="list"
+          />
+
+          <datalist id="list">
+            <option value="IT Technician"></option>
+            <option value="HR Manager"></option>
+            <option value="Accounts"></option>
+            <option value="Front Desk"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="comments">Comments</label>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+            placeholder="Enter any special comments herer"
+            tabindex="5"
+          ></textarea>
+        </div>
+        <div>
+          <label for="upload">Upload Resume</label>
+          <input
+            type="file"
+            name="upload"
+            id="upload"
+            tabindex="6"
+            accept=".doc,.docx,application/pdf"
+          />
+        </div>
+        <div>
+          <input type="submit" value="Register" />
+          <input type="reset" value="Remove" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

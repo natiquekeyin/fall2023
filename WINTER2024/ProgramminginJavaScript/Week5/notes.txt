@@ -1,0 +1,111 @@
+January 30,2024:
+
+
+Three forms of UDFs:
+      i) Function Declarations
+      ii) Function expressions
+      iii) Arrow Functions... 
+    
+    1. Function Declarations:
+
+
+      function foo(){
+
+      }
+
+      function square(n){
+        return n*n;
+      }
+
+      function add(a,b){
+        return a+b;
+      }
+
+      foo(); //calling the function
+      square(5); // return 25
+      add(1,2); //return 3
+    
+    2. Function Expressions:
+    let foo = function(){   }; //Anonymous function? function does not have any name here.. rather it has been stored in a normal variable...
+
+    let square = function(n){ return n* n};
+
+    let add = function(a,b){
+      return a+b;
+    }
+
+    3. Arrow Functions:
+
+    let foo = ()=>{ }
+
+    let square = (n)=>{ return n*n;}
+
+    let add=(a,b)=>{ return a+b;}
+
+
+    Parameters and Arguments:
+
+    function emptyParameters(){}
+
+    function singleParam(oneParameter){ }
+
+    function multipleParams(one,two,three,four)
+
+
+    for(initialization ; condition ; increment/decrement){
+
+
+    }
+
+    St1: initialization...
+    St2: Condition test..
+    St3: if condition is true - execute the body
+         if condition is false exit the loop body...
+    St4: (if true) increment/decrement happens
+    St5: Condition is tested again...and St3..
+
+    for(var i=0; i<3; i++){
+        console.log(i); //0 1 2
+    }
+
+
+    for(var i=1; i<=10; i++){
+        console.log(i); 
+            }
+1,2,10
+
+10,...1
+
+for(var i=10; i>=1; i--){
+    console.log(i); 
+}
+
+
+Parameters and ... :
+... is called "rest" of the parameters...
+
+unary operator: ++, --, !, ++i, i--, 
+
+Binary operator: +, - , *, / ---->two operands
+
+Ternary operator:three operands...
+op_1 ? op_2 : Op_3
+
+op_1: The condition that evaluates to true or false...
+op_2: THe value that is executed if teh condition in op_1 is true
+op_3: THe value that is executed if teh condition in op_1 is false
+
+
+Dealing with Optional and Missing Arguments:
+
+|| Logical ORing...
+
+bonus = bonus || 1;
+(bonus||1)
+
+
+
+Built-in/Global/Predefined functions:
+1. parseInt()
+2. parseFloat()
+3. isNaN()
