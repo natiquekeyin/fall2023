@@ -6,9 +6,7 @@ h1 {
   color: red;
 }
 
-#media {
-  color: green;
-}
+
 
 .demo {
   background-color: red;
@@ -48,4 +46,8 @@ cite {
 .info-box img {
   width: 75px;
   height: 75px;
+}
+
+#media {
+  color: green;
 }
