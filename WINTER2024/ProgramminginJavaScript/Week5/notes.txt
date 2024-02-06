@@ -84,7 +84,7 @@ for(var i=10; i>=1; i--){
 Parameters and ... :
 ... is called "rest" of the parameters...
 
-unary operator: x++, --, !, ++i, i--, 
+unary operator: ++, --, !, ++i, i--, 
 
 Binary operator: +, - , *, / ---->two operands
 
