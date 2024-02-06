@@ -1,0 +1,46 @@
+Objects and Object Oriented Programming(OOP):
+ We work on Objects!
+ Objects are a collection of "data/properties/features" and "operations that can be applied on the data".
+ 
+String Objects and its functions:
+Arrays:
+
+let arr1=[1,2,3,4];
+let arr2 = new Array(1,2,3,4);
+
+Destructuring assignment:
+let[username,domain]="johnsmith@gmail.com".split("@");
+
+
+Array properties and Methods:
+length
+push()
+unshift()
+
+pop()
+shift()
+
+arr.concat([1,2,3],6);
+arr.includes(3);
+
+arr.join("").... converts an array to a String
+"hello".split(e).. converts a string to an array...
+
+February 6,2024:
+
+Properties and methods:
+
+var name="keyin";
+var name2=new String("keyin College");
+
+console.log(name.length);
+console.log(name.toUpperCase());
+
+
+Methods to traverse elmements in an array:
+
+1. for loop
+2. forEach( )
+3. map()
+4.find() .. finds and returns an element from the array which matches a condition you define ...
+5. filter( )... creates and returns a new array containing only those elements that matcha a condition you define in your function

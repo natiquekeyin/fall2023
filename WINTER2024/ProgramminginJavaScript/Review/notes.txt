@@ -1,0 +1,20 @@
+Topics from Students:
+    1. Syntax of Loops in JS (almost all languages)
+    2. Ternary operator(short form of if else)
+    3. Truthy and falsy (new topic - we may discuss during regular class)
+    4. Arrow functions (comfortability with it??) - handling the missing arguments/ handling the missing return
+
+
+    For loop in JS:
+
+    let x=1; //Yes ..
+    x=2; // Yes..
+
+    for(initialization; condition; increment/decrement)
+    {
+
+        
+    }
+
+
+
