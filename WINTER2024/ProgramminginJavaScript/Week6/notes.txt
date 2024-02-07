@@ -60,7 +60,7 @@ Regular Expressions:
  let re=/colou?r/;
  let re2 = new RegExp('colou?r');
 
- Period:
+ Period
  . means any letter in RE..
  [] represents a set of letters, one of which shoud be ther...
  ^ when used in [] will reverse...
