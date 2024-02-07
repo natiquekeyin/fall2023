@@ -33,4 +33,8 @@ font-family
 text-align
 
 Styling links:
+pseduo selectors: a:hover, a:link etc...
+
+
+CSS Box Model:
 

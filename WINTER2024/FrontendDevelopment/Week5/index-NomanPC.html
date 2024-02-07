@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1><span style="font-size: 100px">W</span>eek5</h1>
+    <h2>Tables</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fredrik</td>
+          <td>23</td>
+          <td>fred@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Frank</td>
+          <td>22</td>
+          <td>frank@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Qantity</th>
+          <th>Color</th>
+          <th>Price(CAD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Red</td>
+          <td>$5.30</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Green</td>
+          <td>$3.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total</td>
+          <td>$8.30</td>
+        </tr>
+      </tfoot>
+    </table>
+    <hr />
+
+    <table width="300" border="1">
+      <tr>
+        <td colspan="2">A</td>
+      </tr>
+
+      <tr>
+        <td>B</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td rowspan="2">D</td>
+        <td>E</td>
+      </tr>
+      <tr>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td colspan="2">G</td>
+      </tr>
+    </table>
+    <hr />
+    <h2 style="color: red">
+      Forms in <span style="color: green; font-size: 70px">HTML</span>Something
+    </h2>
+
+    <form action="/submit" method="GET">
+      Name: <input type="text" name="x" id="y" /> Password:
+      <input type="password" name="pwd" />
+
+      <input type="submit" value="Send" />
+    </form>
+
+    <h2 id="media">Media in HTML</h2>
+    <h3 class="demo">Images</h3>
+    <p class="demo">We have some special elements for images and figures</p>
+    <figure>
+      <img src="../week4/images/tree2.jpg" alt="Pic" width="200" />
+      <figcaption>Figure by unsplash.com...</figcaption>
+    </figure>
+
+    <h3>Videos</h3>
+    <video src="./videos/kids.mp4" width="200" controls></video>
+    <hr />
+
+    <iframe
+      width="200"
+      height="200"
+      src="https://www.youtube.com/embed/0yD1_nzIcj0?si=0sTWIZjSyK19lvFb"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+
+    <h2 class="demo">Some special elements</h2>
+    <h3>Date and Time</h3>
+    <time>February 1, 2024</time> <br />
+    <time datetime="2024-02-02 17:00">Tomorrow at 5pm</time> <br />
+    <time datetime="2024-01-31">Yesterday</time>
+
+    <h3>Address</h3>
+    <address>103 Topsail Rd. NL</address>
+
+    <h3>Abbreviations</h3>
+    <abbr title="Hypertext Markup Language">HTML</abbr> <br />
+    <abbr title="Cascading Style Sheet">CSS</abbr>
+
+    <h3>Code</h3>
+    <code> printf("This is C language code"); </code>
+
+    <h3>Super and Subscripts</h3>
+    H<sub>2</sub>O <br />
+    X<sup>2</sup> <br />
+
+    <q>This is a q <span>before</span> div</q>
+    <div>
+      <h3>Quotations</h3>
+      <span>Span out of q</span>
+      <q>This is a <span>quotation</span> </q>
+    </div>
+    <blockquote>This is a block quotation....</blockquote>
+    <h3>Citation</h3>
+    We use <cite>This to cite a resource</cite>
+
+    <div class="info-box">
+      <p><span>Name:</span>Simon Doul</p>
+      <p><span>Age:</span>23</p>
+      <img src="../Week4/images/tree2.jpg" alt="pic" />
+    </div>
+
+    <div class="info-box">
+      <h3>SOmething</h3>
+      <p>SOmething</p>
+    </div>
+  </body>
+</html>

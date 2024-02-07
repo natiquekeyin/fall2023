@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.task {
+  background-color: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.task h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}
+
+.add-form {
+  margin-top: 40px;
+}
+
+.form-control {
+  margin: 10px 5px;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 30px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 16px;
+}
+
+.form-control.check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control.check label {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.taskD {
+  border: 1px solid gray;
+  border-radius: 9px;
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.taskD p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}

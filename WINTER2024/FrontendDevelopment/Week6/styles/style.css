@@ -2,6 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body,
 html {
   font-size: 16px;
@@ -42,4 +48,43 @@ a:visited {
 a:hover {
   text-decoration: underline;
   color: red;
+}
+
+h1 {
+  border: 1px solid green;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#a1 {
+  border: 10px solid red;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.d2 {
+  border: 1px solid black;
+  display: flex;
+
+  justify-content: space-evenly;
+}
+
+section {
+  border: 1px solid black;
+  color: rgb(232, 58, 58);
+}
+
+#one {
+  background-color: #707b7c;
+  flex: 1;
+}
+#two {
+  background-color: aqua;
+  flex: 1;
+}
+
+#three {
+  background-color: wheat;
+  flex: 1;
 }
