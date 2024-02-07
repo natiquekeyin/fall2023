@@ -37,7 +37,7 @@ console.log(name.length);
 console.log(name.toUpperCase());
 
 
-Methods to traverse elmements in an array:
+Methods to traverse elmements in an array
 
 1. for loop
 2. forEach( )
