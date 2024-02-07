@@ -42,5 +42,40 @@ Methods to traverse elmements in an array
 1. for loop
 2. forEach( )
 3. map()
-4.find() .. finds and returns an element from the array which matches a condition you define ...
-5. filter( )... creates and returns a new array containing only those elements that matcha a condition you define in your function
+4. find() .. finds and returns an element from the array which matches a condition you define ...
+5. filter( )... creates and returns a new array containing only those elements that match a condition you define in your function
+
+Feb 7,2024
+
+Regular Expressions:
+
+ These are patterns that we define to manipulate strings.
+ Manipulation means finding, replacing,converting etc etc of strings..
+
+ colou?r
+
+ color --correct
+ colour ---correct
+
+ let re=/colou?r/;
+ let re2 = new RegExp('colou?r');
+
+ Period:
+ . means any letter in RE..
+ [] represents a set of letters, one of which shoud be ther...
+ ^ when used in [] will reverse...
+ \d Any number (digit)
+ \D NOT THE DIGIT
+ \w [a-zA-Z0-9_] a word .. consists of all these..
+ \s is one space..
+ ? refers to an optional character...
+ * .. 0 or more ...
+ + .. 1 or more 
+ { } in which we can mention the exact number of somethig.
+ ( )paranthesis in RE represent "Capture group".. Details soon...
+ ^ represents the start of the Regular expression 
+ $ represents the end of it...
+
+ Our phone number regular expression: /(\(?\d{3}\)?[-\s]*)?\d{3}[-\s]*\d{4}/
+
+ .test() tests the given RE with the passed string and returns true or false...
