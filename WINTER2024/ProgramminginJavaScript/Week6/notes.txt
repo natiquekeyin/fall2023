@@ -54,7 +54,7 @@ Regular Expressions:
 
  colou?r
 
- color --correct
+ color --correctcc
  colour ---correct
 
  let re=/colou?r/;
