@@ -1,0 +1,90 @@
+@import url(https://db.onlinewebfonts.com/c/1e44faec07b8b81f60a3215d76bd0086?family=Irvin-Heading);
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+
+body {
+  margin: 40px;
+}
+
+header h1,
+header h2 {
+  font-family: "Irvin-Heading";
+}
+
+main,
+header {
+  max-width: 500px;
+}
+
+header h2 {
+  color: red;
+  font-size: 0.7rem;
+}
+
+header h1 {
+  font-size: 2.3rem;
+}
+
+#social {
+  display: none;
+}
+
+#author {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  font-style: italic;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+#credit {
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+#credit a {
+  color: gray;
+  text-decoration: none;
+}
+
+#credit a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+main {
+  font-family: "EB Garamond", serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.firstletter {
+  font-size: 4.5rem;
+  line-height: 60px;
+  float: left;
+  padding-right: 8px;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    margin: 5px;
+    width: 100%;
+    background-color: azure;
+  }
+
+  header {
+    text-align: center;
+  }
+  #social {
+    display: block;
+  }
+  #social i {
+    padding: 20px 30px;
+  }
+}
