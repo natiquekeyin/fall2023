@@ -54,7 +54,7 @@ Regular Expressions:
 
  colou?r
 
- color --correctcc
+ color --correct
  colour ---correct
 
  let re=/colou?r/;
@@ -67,6 +67,7 @@ Regular Expressions:
  \d Any number (digit)
  \D NOT THE DIGIT
  \w [a-zA-Z0-9_] a word .. consists of all these..
+ \W Not a word
  \s is one space..
  ? refers to an optional character...
  * .. 0 or more ...
@@ -79,3 +80,4 @@ Regular Expressions:
  Our phone number regular expression: /(\(?\d{3}\)?[-\s]*)?\d{3}[-\s]*\d{4}/
 
  .test() tests the given RE with the passed string and returns true or false...
+ .match() matches a given string with the RE and returns an array of all capture groups

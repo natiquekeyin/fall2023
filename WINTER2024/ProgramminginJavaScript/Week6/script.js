@@ -117,3 +117,12 @@ let dateToday = "05/02/2024";
 // console.log(addPeriod(s));
 
 // Write a function makeSentence() that takes a string and checks if first letter is capital, if not makes it capital and return.. if yes returns the sentence..
+
+let myArray = [1, 3, 4, 5];
+
+// for (let num of myArray) {
+//   console.log(num);
+// }
+
+let newMyArray = myArray.map((num) => num + 3);
+console.log(newMyArray);
