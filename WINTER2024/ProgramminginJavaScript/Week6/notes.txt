@@ -81,3 +81,5 @@ Regular Expressions:
 
  .test() tests the given RE with the passed string and returns true or false...
  .match() matches a given string with the RE and returns an array of all capture groups
+ .split(/\s*,\s*/)
+ .replace(/,\s+/," ");
