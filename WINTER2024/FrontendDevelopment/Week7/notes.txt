@@ -1,0 +1,41 @@
+
+* First effort to integrate HTML,CSS with JavaScript..
+API - (Application Programming Iterface)
+ My website will talk to Keyin website through that API..
+
+DOM: Document Object Model
+ is an API that makes communication between HTML,CSS and Javascript...
+
+DOM Tree:
+The html loaded in the browswer memory is in form of a tree called DOM tree.
+DOM Nodes: (All elements within html document)
+
+Text Nodes & Attribute nodes:
+
+Programming the DOM:
+    Webpages are dynamic: they can change in response to user actions, different data, javaScript code etc...
+    
+    DOM always keeps the current or actually content of the page as it exiss right now in your browser...
+
+    Question: HOw does one modify a web page after it is rendered in teh browser...
+    Answer: DOM 
+
+
+    DOM is a programming interface(i.e; set of Objects, fuctions and properties..)
+
+
+    DOM accomplishes a number important tasks:
+
+    1. Finding and getting the references to the elements in the page...
+
+    2. Creating, adding, and removing elements from the DOM Tree..
+
+    3.Inspecting and modifying elements and their content..
+
+    4. Run code in response to events triggered by the user, browser or other parts of code.
+
+    1. Finding elements in the DOM with JavaScript:
+        a. by using document object: it will only find generalized sub components...
+        b. getElementById('id');
+        c. querySelector(selectors)  & querySelectorAll(selectors);
+            selectors: 1. Tag names, 2. ID, 3. Class name
