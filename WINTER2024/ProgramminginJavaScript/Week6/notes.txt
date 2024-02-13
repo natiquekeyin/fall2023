@@ -83,3 +83,5 @@ Regular Expressions:
  .match() matches a given string with the RE and returns an array of all capture groups
  .split(/\s*,\s*/)
  .replace(/,\s+/," ");
+
+ [The practice.js that we started this week(Week6) has been moved to Week7 folder.]

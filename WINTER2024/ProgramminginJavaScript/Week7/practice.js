@@ -2,43 +2,48 @@
 
 var csvData = `01234,Alan Smith,519-123-4567,62 inches
 01235,              Bob        Woolmer, 2261234567,           149cm
-01236,             Christina Lee      , 519 222 1234, 138 cm`;
+01236,             Christina           Lee      , 519 222 1234, 138 cm`;
 
 // Required: CLEAN THE DATA...
 
 // Req 1: Split the string into an Array of separate rows(i.e an Arry with rows separated by \n).
 // Req 2: Each row contains informaton of a user like: ID, Name, Phone Number, and Height info all separated by the commas. Split each row into an Array with all of its different fields. N.B:We need to deal with extra and/or no whitespace between the commas...
 
+// Req 3: Get rid of any extra spaces around the Name field...
+
+// Req 4: Using a RegExp extract the Area Code from the phone number fields. All phone numbesrs in in one of two formats: "123-345566", or "123234234", "123 123 4567"
+
 function splitIntoRows(s) {
   return s.split(/\r?\n/g);
 }
 
 function rowToFields(row) {
-  return row.split(/\s*,\s*/g);
+  // split on , with or without space...
+  let fields = row.split(/\s*,\s*/g);
+
+  // Remove extra whitespace from name
+
+  fields[1] = fields[1].replace(/\s+/g, " ");
+
+  // Extra Area code from phone numbers:
+
+  let phoneNumber = fields[2];
+  let matches = phoneNumber.match(/(\(?\d{3}\)?)?[-\s]*\d{3}[-\s]*\d{4}/);
+  if (matches) {
+    fields[2] = `${matches[1]}`;
+  }
+
+  return fields;
 }
 
 function processCSV(csv) {
   // step1 - break the csv into rows
   let rows = splitIntoRows(csv);
-  //step2 - split all rows into array of fields
-  //   let data = [];
-  //   for (let i = 0; i < rows.length; i++) {
-  //     let row = rows[i];
-  //     let fields = rowToFields(row);
-  //     data.push(fields);
+  // step2 - s;litting the row into fields array
 
-  //     // console.log(fields);
-  //   }
-
-  // for (let row of rows) {
-  //   let fields = rowToFields(row);
-  //   data.push(fields);
-  // }
-
-  let data = rows.map((row) => rowToFields(row));
+  let data = rows.map((row) => rowToFields(row)); //***/
 
   console.log(data);
-
   return csv;
 }
 

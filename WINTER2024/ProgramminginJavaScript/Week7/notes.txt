@@ -1,0 +1,32 @@
+ //step2 - split all rows into array of fields
+  //   let data = [];
+  //   for (let i = 0; i < rows.length; i++) {
+  //     let row = rows[i];
+  //     let fields = rowToFields(row);
+  //     data.push(fields);
+
+  //     // console.log(fields);
+  //   }
+
+  // for (let row of rows) {
+  //   let fields = rowToFields(row);
+  //   data.push(fields);
+  // }
+
+
+
+  let data = rows.map((row) => rowToFields(row));
+
+  console.log(data);
+
+
+  // map( ) creates and returns a new array after applying specific function on each value of a collection...
+
+
+
+   /***/ You will only make 100% sense of this statement if you have mastery over map( ) and arrow functions...
+
+
+   // let data = rows.map(function (row) {
+  //   return rowToFields(row);
+  // });
