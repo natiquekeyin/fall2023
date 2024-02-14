@@ -39,3 +39,121 @@ Programming the DOM:
         b. getElementById('id');
         c. querySelector(selectors)  & querySelectorAll(selectors);
             selectors: 1. Tag names, 2. ID, 3. Class name
+            querySelector("#d2"); querySelector(".demo");
+    
+    2. Creating, adding and removing elemetns and their contents:
+
+        1. document.createElement(name) creates and returns a new element of type specified by the name..
+        2. document.createTextNode(text) crates a text node ...(the text within an element vs. the elemnt itself..)
+
+          document.body.appendChild(newP);
+
+      document.body.appendChild(newPic);
+
+       //   let x = document.getElementById("p2");
+      //   console.log(x);
+      //   let y = document.getElementById("l2");
+      //   console.log(y);
+
+      //   let x = document.querySelector("li");
+      //   console.log(x);
+
+      //   console.log(document.querySelector("li"));
+
+      //   let x = document.querySelectorAll("li")[0];
+      //   console.log(x);
+
+      //   let pic = document.querySelectorAll("img");
+      //   console.log(pic);
+
+      //   let x = document.querySelector("#l2");
+      //   console.log(x);
+
+      //   let y = document.querySelector(".demo");
+      //   console.log(y);
+
+      // let x = document.querySelector("#l2");
+      // console.log(x);
+
+        let newP = document.createElement("p");
+      // console.log(newP);
+
+      let newPic = document.createElement("img");
+      // console.log(newPic);
+
+      let newT = document.createTextNode("Hello World");
+      // console.log(newT);
+
+      newP.appendChild(newT);
+      console.log(newP);
+
+       let newHeading = document.createElement("h2");
+      let textNode = document.createTextNode("THis is a new heading");
+      newHeading.appendChild(textNode);
+      // document.body.appendChild(newHeading);
+
+      document.querySelector("#d2").appendChild(newHeading);
+
+
+ let myLi = document.querySelector("#l2");
+      // console.log(myLi.parentElement);
+
+      myLi.className = "demo";
+      console.log(myLi);
+
+
+    let pic = document.querySelector("#pic1");
+      console.log(pic.className);
+
+      pic.removeAttribute("class");
+      console.log(pic);
+     
+
+3.Inspecting and modifying elements and their content..
+    Once we have a refence to an element in JavaScript, we use a number of properties and methods to work with it...
+
+   a. element.id: <p id="intro"></p>
+b. element.innerHTML - gets or sets the markup contained withing the element...
+
+c. element.innerText -gets or sets the inner txt of any element..
+
+d.element.parentNode - gets a refernce to the parent node of this element in the DOM...
+
+e. element.nextSibling - gets a refernce to the sibling element of this element...
+f.element.className - ...gets or sets a class attribute of any given element..
+
+Element Methods for DOM manipulation:
+
+element.scrollIntoView() : scrlls the page until the element is in view..
+
+element.hasAttribute(name) - checks if the attribute "name" exists on this element...
+
+element.getAttribute(name) gets the value fo the attribute...
+
+
+element.setAttribute(name, value) - sets the value of teh attribute name on this element...
+
+elment.removeAttribute(name);
+
+
+
+ 4. Run code in response to events triggered by the user, browser or other parts of code.
+    Events: DOM heavily relies on a concept known as "event-driven programming".
+     In even-driven programs, a main loop (aka the event loop) process events as they occur.
+
+     Example of events include like user actions(clicking a button, moving the mouse, pressing a key, changing tabs in browser), or browser/code initied events(timers, messages fro background process, report from sensor)
+
+     Event handlers: they will handle the subsequent events when happened...
+
+     YOu can think of events like light switches, and event handlers like light fixtures: flipping a light switch on or off triggers an action in the light fixture, or poissilbe mulitple light fixtures at once.. The lights handle the event of teh light switch being flipped...
+
+     We can register a DOM event handler for a given event in one of two ways:
+
+      1. element.onevent = function ( ){   };
+      2. element. addEventListener('event', function(){   }) & element.removeEventListener("event", function(){   })
+
+
+      function handleClick2(e) {}
+
+// body.onclick = handleClick;
+// body.onclick = handleClick2;
