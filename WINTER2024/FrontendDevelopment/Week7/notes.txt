@@ -157,3 +157,14 @@ elment.removeAttribute(name);
 
 // body.onclick = handleClick;
 // body.onclick = handleClick2;
+
+// get reference to the elment(to which you want to attach an event)
+let body = document.body;
+
+// define what function you want to run on a particular event triggered by the selected element..
+function handleClick(e) {
+  console.log("Body Clicked");
+}
+
+// attach an event of "click" to the selected element...
+body.addEventListener("click", handleClick);
