@@ -4,14 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      .thumb {
+        border-radius: 50%;
+        height: 75px;
+        width: 75px;
+        border: 1px solid green;
+      }
+    </style>
   </head>
   <body>
     <h1>Playing with Events in DOM</h1>
-    <p id="p1">This is tree picture <span id="num">1</span></p>
+    <p id="p4">This is tree picture <span id="num">1</span></p>
     <img src="../Week4/images/tree2.jpg" alt="Tree" width="200" id="tree" />
+    <div id="morePics">
+      <button id="pics">More Pictures</button>
+      <p id="urls">
+        <!-- 
+          <ol>
+            <li>https://images.unsplash.com/photo-1437964706703-40b90bdf563b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dHJlZXxlbnwwfHwwfHx8MA%3D%3D </li>
+            <li>
 
-    <script src="./scripts/tree.js
-    "></script>
+            </li>
+
+            <li>
+
+            </li>
+
+
+         -->
+      </p>
+    </div>
+
+    <div id="position">
+      <h2>Mouse Position:</h2>
+      <p>X: <span id="posX">0</span></p>
+      <p>Y: <span id="posY">0</span></p>
+    </div>
+
+    <div>
+      <p id="p1" hidden>
+        The current date and time is <time id="current-date"></time>
+      </p>
+      <button id="btn-start">Start Timer</button>
+      <button id="btn-end">End Timer</button>
+    </div>
+
+    <script src="./scripts/tree.js"></script>
     <script src="./scripts/links.js"></script>
   </body>
 </html>
