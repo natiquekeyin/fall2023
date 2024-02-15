@@ -14,4 +14,4 @@ function handleSubmit(e) {
   e.preventDefault();
 }
 
-// the value alwyas comes out as string.. so you will always need to convert it if doing a mathematical calculation..
+// the value always comes out as string.. so you will always need to convert it if doing a mathematical calculation..
