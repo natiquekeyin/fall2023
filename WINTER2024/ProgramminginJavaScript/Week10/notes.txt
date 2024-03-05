@@ -1,0 +1,6 @@
+Two frameworks for fullstack development:
+    1. MEAN (MongoDB, Express JS, Angular, Node JS)
+    2. MERN (-, -, React, -)
+
+2."R" is used to develop user interfaces:
+    HTML+CSS+JavaScript = React JS
