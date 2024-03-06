@@ -1,0 +1,20 @@
+Object data type:
+
+let obj = {
+    name:"Alan"
+    age:21
+    email:"alan@gmail.com"
+}
+
+
+
+let objBook = new Book();
+let objBook2 = new Book();
+
+console.log(objBook);
+console.log(objBook2);
+
+objBook.title = "javascript";
+objBook2.title = "HTML";
+console.log(objBook.title);
+console.log(objBook2.author);

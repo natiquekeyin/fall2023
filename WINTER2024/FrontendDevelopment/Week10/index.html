@@ -11,11 +11,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .success,
+      .error {
+        color: white;
+        width: 100%;
+      }
+      .success {
+        background-color: green;
+      }
+      .error {
+        background-color: red;
+      }
+
+      #box {
+        padding: 5px 10px;
+        font-size: 1.5rem;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <h1>Add Book</h1>
-
+      <!-- <div><p>No field should be empty</p></div> -->
       <form id="book-form">
         <div>
           <label for="title">Title</label>
@@ -34,7 +52,7 @@
         </div>
       </form>
 
-      <table class="u-full-width">
+      <table class="u-full-width" id="data">
         <thead>
           <tr>
             <th>Title</th>
@@ -55,6 +73,6 @@
       </table>
     </div>
 
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/oop.js"></script>
   </body>
 </html>
