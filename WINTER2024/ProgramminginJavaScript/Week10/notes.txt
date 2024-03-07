@@ -4,3 +4,30 @@ Two frameworks for fullstack development:
 
 2."R" is used to develop user interfaces:
     HTML+CSS+JavaScript = React JS
+
+.gitignore: 
+
+everything in this file will be ignored while pushing the changes to the github repositbory.
+
+NEVER EVER PUSH OR SEND(TO ME) YOUR NODE MODULE FOLDER!! NEVER NEVER....
+
+ONE SHOULD ALWAYS IGNORE(REMOVE) THE NODE_MODULES FOLDER AND THEN SEND YOUR PROJECT.... (I DEARLY HOPE SO)
+
+BUT NEVER FORGET TO SEND YOUR "package.json"!!
+
+When the react project is sent, node_modules is not included. On receving side, we need to "npm install" that will read "package.json" and produce back the node_modules folder.
+
+MPA /SPA
+
+
+index.html (has #root div)
+index.js accesses the root div and creates a ReactDOM root...
+and by using root object it renders a component (<App/>).
+
+Components:
+<App/> component:
+each component returns "JSX"...
+
+JSX is actually a combination of HTML, CSS and JavaScript!
+
+We use JSX to show the output on our components!
