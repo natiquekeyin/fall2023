@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", function () {
     div.className = c;
     div.id = "box";
     let container = document.querySelector(".container");
-    container.insertBefore(div, form);
+    container.insertBefore(div, form); // insert div before form
 
     setTimeout(function () {
       document.querySelector("#box").remove();
