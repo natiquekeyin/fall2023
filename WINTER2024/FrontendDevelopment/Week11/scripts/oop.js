@@ -40,3 +40,5 @@ window.addEventListener("DOMContentLoaded", function (e) {
     e.preventDefault();
   });
 });
+
+// end of function
