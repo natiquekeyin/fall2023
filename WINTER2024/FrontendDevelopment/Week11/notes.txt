@@ -1,0 +1,40 @@
+Week11:
+ Prototypal Inheritance: A classical way of implementing objects in JS.(NOT INCLUDING CLASSES DIRECTLY)
+
+ ES5, ES6 introduced the concept of Classes and objects...more close to the OOP..(object Oriented Programming)
+
+Other then JavaScript! all OOP languages define constructor with the SAME name as class:
+
+In othe languages:
+
+class Book{
+
+    Book(){
+
+    }
+}
+
+
+// class Book {} // a class is a blue print in which we dfine our data and functions...
+
+// let objBook = new Book(); //we create object to use the classes' properties....
+
+class Book {
+  // special function called "constructor function" that is used to initialize the values of class...
+
+  constructor(a, b) {
+    this.x = a;
+    this.y = b;
+  }
+
+  someFunction() {
+    this.x = 10;
+    this.y = "Alan SMith";
+  }
+}
+
+let objBook = new Book();
+
+// objBook.someFunction();
+
+console.log(objBook);

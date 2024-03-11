@@ -25,6 +25,8 @@ Prototype in JavaScript:
     When we put something in Prootptye it becomes virtually the part of the object but physicall it does not get loaded with the object code...
     when we need it we call it.. with the same object tha we have created by using the constructor function..
 
+Prototypal Inheritance: is technique in JS in which we place those non frequently used things in the prototype of the constructor, thus not making them the part of every created object body...
+
 
 Practice for today:
 
