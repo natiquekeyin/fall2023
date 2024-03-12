@@ -1,0 +1,16 @@
+
+Props: properties are like parameters that we pass to the components.
+
+defaultProps provide default vaalues..
+
+and PropTypes provide the type as well as required value for props...
+
+Generally in CSS we have kebab case..
+
+background-color (Remember??)
+
+Styling in JSX:
+
+All those properties are written in camelCase...
+
+The functions also can be passed as Props to the components! 
