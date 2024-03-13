@@ -14,3 +14,11 @@ Styling in JSX:
 All those properties are written in camelCase...
 
 The functions also can be passed as Props to the components! 
+
+State of a component:
+ 1. class components -> State
+ 2. Function components -> Hooks!
+
+ HOOKS!
+ 1. useState() Hook:
+    Keeps track of the state of the component(the values carried forward by the variables in the component)

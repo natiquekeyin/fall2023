@@ -2,10 +2,7 @@ import PropTypes from "prop-types";
 
 import Button from "./Button";
 
-function Header({ title }) {
-  const onClick = (e) => {
-    console.log("click from header component");
-  };
+function Header({ title, onClick }) {
   return (
     <header>
       <h1>{title}</h1>
