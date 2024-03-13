@@ -38,3 +38,11 @@ let objBook = new Book();
 // objBook.someFunction();
 
 console.log(objBook);
+
+LocalStorage API:
+
+static: static functions CAN be accessed without createing object of their class.
+static functions and variables are actually "class" level elements NOT "object" level elemetns...
+static functions/variables do not require object to be accessed...
+Store.addBook();
+Store.removeBook();
