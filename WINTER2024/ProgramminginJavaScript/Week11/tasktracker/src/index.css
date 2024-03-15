@@ -39,3 +39,11 @@ header {
   align-items: center;
   margin-bottom: 20px;
 }
+
+.task {
+  background-color: #df9595;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}

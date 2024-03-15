@@ -22,3 +22,12 @@ State of a component:
  HOOKS!
  1. useState() Hook:
     Keeps track of the state of the component(the values carried forward by the variables in the component)
+
+
+setPerson({name:"Bob"}) ??? 
+
+ {/* <Temp1 /> */}
+      {/* <Temp2 /> */}
+      {/* <Temp3 /> */}
+
+To make tasks state variable GLOBAL, we need to put that into our App component which is always the home/first component to run...Ultimately passed to the concerned components when needed...
