@@ -1,0 +1,24 @@
+API: Application Programming Interface!
+    contract provided by one piece of software to another!
+    structured request and response!
+
+REST APIS:
+    Representational State Transfer
+    Architecrure style for designing networked applications
+    Relies on a stateless, client-server protcol, ALMOST ALWAYS HTTP...
+    Treats server objects as resources that can be created or destroyed...
+    All APIS have their own rules and structure....
+
+    HTTP Requests:
+        GET: Retrieve data from a specified resource..
+        POST: Submit data to be processed to a spceified resource
+        PUT: Update a specified resource
+        DELETE: Delete a specified resource
+
+
+    API Endpoints:
+        GET     https://someurl.com/api/users .... //Get all users
+        GET     https://someurl.com/api/users/1... //Get one user only with id 1
+        POST    https://someurl.com/api/users.......//Add a user
+        PUT     https://someurl.com/api/users/1...//Update user
+        DELETE  https://someurl.com/api/users/1.... Delete user....

@@ -67,3 +67,9 @@ XMLHttpRequest(XHR) Object:
  We are bringing data from our own folders..
  next we will go to a website(API)that will provide 1000s of uses and we can display them on our page../..
 
+
+APIs that provide us the data, and we can test our front-end by accessing the data from those APIs
+
+Endpoint provided by the API:
+https://reqres.in/api/users
+The above is one endpoint to access some fake users data....

@@ -83,3 +83,29 @@ function loadJSONS() {
   };
   xhr.send();
 }
+
+document.querySelector("#btn4").addEventListener("click", loadAPI);
+
+function loadAPI() {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open("GET", "https://reqres.in/api/users?page=1");
+
+  // POST, PUT, DELETE...
+  xhr.onload = function () {
+    if (this.status === 200) {
+      const response = JSON.parse(this.responseText);
+      let output = "";
+
+      response.data.forEach((user) => {
+        output += `<div class="profile"><h3> ${user.first_name}</h3>
+        <img src = "${user.avatar}" width="100" class="pic"/>  <p>${user.last_name} <br>  ${user.email}  
+        <br/></div>`;
+      });
+
+      document.querySelector("#output").innerHTML = output;
+    }
+  };
+
+  xhr.send();
+}
