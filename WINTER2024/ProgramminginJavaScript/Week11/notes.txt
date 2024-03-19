@@ -31,3 +31,12 @@ setPerson({name:"Bob"}) ???
       {/* <Temp3 /> */}
 
 To make tasks state variable GLOBAL, we need to put that into our App component which is always the home/first component to run...Ultimately passed to the concerned components when needed...
+
+Apply functions/operations on our application:
+1. DeleteTask()
+
+setTasks([2,3]);
+
+ setTasks(tasks.filter((task) => task.id !== id)); 
+
+ tasks=[{2,}{3,}]

@@ -1,17 +1,19 @@
-import { FaAmazon } from "react-icons/fa";
-import { BiAtom } from "react-icons/bi";
+import { FaTimes } from "react-icons/fa";
 
-const Task = ({ task }) => {
+const Task = ({ task, onDelete, onToggle }) => {
   return (
-    <div className="task">
+    <div
+      className={`task ${task.reminder ? "reminder" : ""}`}
+      onDoubleClick={() => onToggle(task.id)}
+    >
       <h3>
-        <FaAmazon style={{ color: "red", border: "1px solid green" }} />
-        {task.text}
+        {task.text}{" "}
+        <FaTimes
+          style={{ color: "red", cursor: "pointer" }}
+          onClick={() => onDelete(task.id)}
+        />
       </h3>
-      <p>
-        <BiAtom />
-        {task.day}
-      </p>
+      <p>{task.day}</p>
     </div>
   );
 };

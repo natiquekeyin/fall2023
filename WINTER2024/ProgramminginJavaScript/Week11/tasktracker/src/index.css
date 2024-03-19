@@ -47,3 +47,12 @@ header {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.task h3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task.reminder {
+  border-left: 7px solid green;
+}
