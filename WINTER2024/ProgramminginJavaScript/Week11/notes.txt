@@ -40,3 +40,6 @@ setTasks([2,3]);
  setTasks(tasks.filter((task) => task.id !== id)); 
 
  tasks=[{2,}{3,}]
+
+ as we use "className" in react instead of "class"[in HTML]
+ same way, we use "htmlFor" in react instead of "for" with labels[in HTML]

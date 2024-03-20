@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
+import AddTask from "./components/AddTask";
 import { useState } from "react";
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
     },
   ]);
 
+  let [showAddTask, setShowAddTask] = useState(false);
+
   let deleteTask = (id) => {
     // console.log("Delete", id);
 
@@ -43,12 +46,22 @@ function App() {
     );
   };
 
+  // to add new task..
+
+  let addTask = (task) => {
+    let id = Math.floor(Math.random() * 1000) + 1;
+    let newTask = { id, ...task };
+
+    setTasks([...tasks, newTask]);
+  };
+
   let onClick = (e) => {
     console.log("click from App component");
   };
   return (
     <div className="container">
       <Header title="Task Tracker" onClick={onClick} />
+      {showAddTask && <AddTask onAdd={addTask} />}
 
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />

@@ -14,7 +14,7 @@ function loadData() {
   fetch("./data/data1.txt")
     .then((res, rej) => {
       if (res.status !== 200) {
-        rej("Error");
+        return rej("Error");
       } else {
         return res.text();
       }
