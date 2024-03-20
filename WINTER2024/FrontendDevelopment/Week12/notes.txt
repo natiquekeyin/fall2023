@@ -22,3 +22,11 @@ REST APIS:
         POST    https://someurl.com/api/users.......//Add a user
         PUT     https://someurl.com/api/users/1...//Update user
         DELETE  https://someurl.com/api/users/1.... Delete user....
+
+XMLHttpRequest - ALREADY DISCUSSED...
+
+Fetch API:
+    1.Promises: 
+        almost like real world promises!
+        1. fulfil , 2. not fulfil
+        1. resolve, 2. reject
