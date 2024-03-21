@@ -30,3 +30,19 @@ Fetch API:
         almost like real world promises!
         1. fulfil , 2. not fulfil
         1. resolve, 2. reject
+
+
+A fetch() promise only rejects when the request fails, for example, because of a badly-formed request URL or a network error. A fetch() promise does not reject if the server responds with HTTP status codes that indicate errors (404, 504, etc.). Instead, a then() handler must check the Response.ok and/or Response.status properties.
+
+
+Async/Await:
+
+A new function type that is called "async" functions!
+
+The async functions return promise..
+
+There is a keyword "await" that is used to wait for the resolution of the promise...
+
+async function fetchData(){
+
+}
