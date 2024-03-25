@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
+
 import { useState } from "react";
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
     },
   ]);
 
-  let [showAddTask, setShowAddTask] = useState(false);
+  let [showAddTask, setShowAddTask] = useState(true);
 
   let deleteTask = (id) => {
     // console.log("Delete", id);
@@ -55,12 +56,13 @@ function App() {
     setTasks([...tasks, newTask]);
   };
 
-  let onClick = (e) => {
-    console.log("click from App component");
-  };
   return (
     <div className="container">
-      <Header title="Task Tracker" onClick={onClick} />
+      <Header
+        title="Task Tracker"
+        onAdd={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}
+      />
       {showAddTask && <AddTask onAdd={addTask} />}
 
       {tasks.length > 0 ? (

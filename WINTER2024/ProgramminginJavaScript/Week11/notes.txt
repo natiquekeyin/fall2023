@@ -43,3 +43,44 @@ setTasks([2,3]);
 
  as we use "className" in react instead of "class"[in HTML]
  same way, we use "htmlFor" in react instead of "for" with labels[in HTML]
+
+
+
+ 2. useEffect( ) Hook:
+
+ useEffect(function,dependency)
+
+ useEffect(function); runs on every render...
+ useEffect(function,[]) runs with only first render
+ useEffect(fucntion, [x]); runs on every change in x...
+
+   //   useEffect(() => {
+  //     setTimeout(() => {
+  //       setCount((count) => count + 1);
+  //     }, 1000);
+  //   });
+
+
+    useEffect(() => {
+    setCalculation(() => count * 2);
+  }, []);
+
+
+  IN OUR PROJECT:
+  We want to set up our own server and make api calls to that!
+
+  How to build and publish our project:
+Step-1: npm run build
+        We get build folder...
+Step -2: npm i -g serve 
+        serve installed that can be used to serve the project locally...
+Step-3: serve -s build -p 8000
+        Start serving the build folder on port 8000... localhost:8000 .. you get your project in Production mode...
+Step-4:NOW INSTALL json-server:
+        npm install json-server
+
+Step-5: In package.json, under the scripts add following script after "eject" script: "server":"json-server --watch db.json --port 5000"
+
+Now we can access the server by running "npm run server" command...
+
+YOU MIGHT NEED TO GO AND ADD DB.JSON() IN YOUR PROJECT FOLDER WITH SOME JSON DATA....
