@@ -3,36 +3,37 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
-  let [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: "School Appointment",
-      day: "March20th at 2:30pm",
-      reminder: true,
-    },
-    {
-      id: 2,
-      text: "GYM",
-      day: "March 21st at 1:30pm",
-      reminder: false,
-    },
-    {
-      id: 3,
-      text: "Interview Appointment",
-      day: "April 20th at 2:30pm",
-      reminder: true,
-    },
-  ]);
+  let [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    const getTasks = async () => {
+      const tasksFromServer = await fetchTasks();
+      setTasks(tasksFromServer);
+    };
+    getTasks();
+  }, []);
+
+  // fetch tasks
+
+  const fetchTasks = async () => {
+    const res = await fetch("http://localhost:5000/tasks");
+    const data = await res.json();
+    // console.log(data);
+    // setTasks(data);
+    return data;
+  };
 
   let [showAddTask, setShowAddTask] = useState(true);
 
-  let deleteTask = (id) => {
-    // console.log("Delete", id);
+  let deleteTask = async (id) => {
+    await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "DELETE",
+    });
 
-    setTasks(tasks.filter((task) => task.id !== id)); //return all tasks BUT the one with this task.id???
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   // Toggle reminder
@@ -49,11 +50,18 @@ function App() {
 
   // to add new task..
 
-  let addTask = (task) => {
-    let id = Math.floor(Math.random() * 1000) + 1;
-    let newTask = { id, ...task };
+  let addTask = async (task) => {
+    const res = await fetch("http://localhost:5000/tasks", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(task),
+    });
 
-    setTasks([...tasks, newTask]);
+    const data = await res.json();
+
+    setTasks([...tasks, data]);
   };
 
   return (

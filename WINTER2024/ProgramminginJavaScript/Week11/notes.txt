@@ -76,6 +76,7 @@ Step -2: npm i -g serve
         serve installed that can be used to serve the project locally...
 Step-3: serve -s build -p 8000
         Start serving the build folder on port 8000... localhost:8000 .. you get your project in Production mode...
+     
 Step-4:NOW INSTALL json-server:
         npm install json-server
 
@@ -84,3 +85,21 @@ Step-5: In package.json, under the scripts add following script after "eject" sc
 Now we can access the server by running "npm run server" command...
 
 YOU MIGHT NEED TO GO AND ADD DB.JSON() IN YOUR PROJECT FOLDER WITH SOME JSON DATA....
+
+Now we are ready to make API calls like... GET, DELETE,
+
+
+DELETE API CALL:
+
+
+deleteTask before API calls: 
+
+ // console.log("Delete", id);
+
+    setTasks(tasks.filter((task) => task.id !== id)); //return all tasks BUT the one with this task.id???
+
+addTask before API calls:
+
+ // the json server itself adds an id to all records..
+    // let id = Math.floor(Math.random() * 1000) + 1;
+    // let newTask = { id, ...task };
