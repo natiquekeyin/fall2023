@@ -1,28 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "bb1a",
-      "text": "GYM",
-      "day": "March 30,2024",
-      "reminder": false
-    },
-    {
-      "id": "e344",
-      "text": "Gym",
-      "day": "March 30,2024",
-      "reminder": false
-    },
-    {
-      "id": "e815",
-      "text": "Meeting",
-      "day": "April 1, 2024",
-      "reminder": true
-    },
-    {
-      "id": "5d52",
-      "text": "Doctor Appointment",
-      "day": "April 3,2024",
-      "reminder": false
-    }
-  ]
+  "tasks": []
 }

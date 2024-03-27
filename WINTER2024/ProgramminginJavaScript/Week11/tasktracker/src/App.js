@@ -5,6 +5,7 @@ import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Temp1 from "./components/Temp1";
+import TaskDetails from "./components/TaskDetails";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -116,6 +117,7 @@ function App() {
           />
 
           <Route path="/about" element={<About />} />
+          <Route path="/task/:id" element={<TaskDetails />} />
           <Route path="/temp1" element={<Temp1 />} />
         </Routes>
         <Footer />

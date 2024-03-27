@@ -1,4 +1,5 @@
 import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Task = ({ task, onDelete, onToggle }) => {
   return (
@@ -13,7 +14,9 @@ const Task = ({ task, onDelete, onToggle }) => {
           onClick={() => onDelete(task.id)}
         />
       </h3>
-      <p>{task.day}</p>
+      <p>
+        <Link to={`/task/${task.id}`}>View Details</Link>
+      </p>
     </div>
   );
 };

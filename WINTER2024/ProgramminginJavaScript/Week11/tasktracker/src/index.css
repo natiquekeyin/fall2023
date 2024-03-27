@@ -41,7 +41,7 @@ header {
 }
 
 .task {
-  background-color: #df9595;
+  background-color: #c4d4a4;
   margin: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -88,4 +88,11 @@ header {
 
 footer {
   text-align: center;
+}
+
+.taskD {
+  margin: 10px auto;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid lightblue;
 }
