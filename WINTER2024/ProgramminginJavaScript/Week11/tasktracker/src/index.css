@@ -85,3 +85,7 @@ header {
 .form-control-check label {
   flex: 1;
 }
+
+footer {
+  text-align: center;
+}

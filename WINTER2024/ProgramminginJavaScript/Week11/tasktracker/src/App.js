@@ -2,8 +2,11 @@ import "./App.css";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
-
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Temp1 from "./components/Temp1";
 import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   let [tasks, setTasks] = useState([]);
@@ -26,6 +29,14 @@ function App() {
     return data;
   };
 
+  // Fetch task
+
+  const fetchTask = async (id) => {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`);
+    const data = await res.json();
+    return data;
+  };
+
   let [showAddTask, setShowAddTask] = useState(true);
 
   let deleteTask = async (id) => {
@@ -38,12 +49,24 @@ function App() {
 
   // Toggle reminder
 
-  let toggleReminder = (id) => {
-    // console.log(id);
+  let toggleReminder = async (id) => {
+    // bring the task to which we want to toggle reminder..
 
+    const taskToToggle = await fetchTask(id);
+    const updTask = { ...taskToToggle, reminder: !taskToToggle.reminder };
+    // server update
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(updTask),
+    });
+    const data = await res.json();
+    // UI update here..
     setTasks(
       tasks.map((task) =>
-        task.id === id ? { ...task, reminder: !task.reminder } : task
+        task.id === id ? { ...task, reminder: data.reminder } : task
       )
     );
   };
@@ -65,20 +88,39 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <Header
-        title="Task Tracker"
-        onAdd={() => setShowAddTask(!showAddTask)}
-        showAdd={showAddTask}
-      />
-      {showAddTask && <AddTask onAdd={addTask} />}
+    <Router>
+      <div className="container">
+        <Header
+          title="Task Tracker"
+          onAdd={() => setShowAddTask(!showAddTask)}
+          showAdd={showAddTask}
+        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                {showAddTask && <AddTask onAdd={addTask} />}
 
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
-      ) : (
-        "No tasks to show"
-      )}
-    </div>
+                {tasks.length > 0 ? (
+                  <Tasks
+                    tasks={tasks}
+                    onDelete={deleteTask}
+                    onToggle={toggleReminder}
+                  />
+                ) : (
+                  "No tasks to show"
+                )}
+              </>
+            }
+          />
+
+          <Route path="/about" element={<About />} />
+          <Route path="/temp1" element={<Temp1 />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
