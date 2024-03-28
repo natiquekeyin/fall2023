@@ -7,7 +7,7 @@ import About from "./components/About";
 import Temp1 from "./components/Temp1";
 import TaskDetails from "./components/TaskDetails";
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   let [tasks, setTasks] = useState([]);
@@ -120,6 +120,12 @@ function App() {
           <Route path="/task/:id" element={<TaskDetails />} />
           <Route path="/temp1" element={<Temp1 />} />
         </Routes>
+        <br />
+        <Link to="/about">About us!</Link>
+        <br />
+        <Link to="/temp1">Temp1</Link>
+        <br />
+        <Link to="/">Home</Link>
         <Footer />
       </div>
     </Router>
