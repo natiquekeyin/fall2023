@@ -71,9 +71,16 @@ class Store {
       objBook.addBookToList(book);
     });
   }
-  static removeBooks(remBook) {
-    // read the books from memory..
-    // filter the books by leaving out the book passed as paramter "remBook"
+
+  // here is one of the model solution to the removeBook() method
+  static removeBook(isbn) {
+    var books = Store.getBooks();
+    books.forEach((book, index) => {
+      if (book.isbn === isbn) {
+        books.splice(index, 1);
+      }
+    });
+    localStorage.setItem("books", JSON.stringify(books));
   }
 }
 
