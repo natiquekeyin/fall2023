@@ -2,8 +2,8 @@ const addPeriod = (s) => {
   return s + "!";
 };
 
-const actual = addPeriod("Keyin"); //return Keyin.
-const expected = "Keyin!";
+const actual = addPeriod("Keyin"); //return Keyin!
+const expected = "Keyin";
 
 try {
   if (actual !== expected) {
